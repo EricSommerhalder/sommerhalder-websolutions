@@ -1,0 +1,17 @@
+{
+  "name": "sommerhalder-websolutions",
+  "version": "1.0.0",
+  "description": "Website for Sommerhalder Websolutions",
+  "main": "src/sommerhalder-websolutions.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Website"
+  ],
+  "author": "Eric Sommerhalder",
+  "license": "ISC",
+  "dependencies": {
+    "TagCloud": "^2.3.2"
+  }
+}

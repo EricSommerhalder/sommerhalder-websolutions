@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="sommerhalder-websolutions.css"/>
+        <script src="https://kit.fontawesome.com/ca1d8359ae.js" crossorigin="anonymous"></script>
+        <title>Sommerhalder Websolutions</title>
+    </head>
+    <body>
+        <header class="navbar">
+            <a onclick="scrollToElement('home')"><img src="../assets/SWS_Logo_Standard_rgb.png"/></a>
+            <div class="links">
+                <a onclick="scrollToElement('about')">About</a>
+                <a onclick="scrollToElement('angebot')">Angebot</a>
+                <a onclick="scrollToElement('projects')">Projekte</a>
+                <a onclick="scrollToElement('ablauf')">Ablauf</a>
+                <a onclick="scrollToElement('contact')">Kontakt</a>
+            </div>
+            <input type="checkbox" id="toggle" class="toggle--checkbox">
+                <label for="toggle" class="toggle--label">
+                    <span class="off">OFF</span>
+                    <span class="on">ON</span>
+                </label>
+        </header>
+       
+        <div id="home">
+            <div class="left"></div>
+            <div class="right">
+                <h1>Individuelle Websites und Webapplikationen made in Basel</h1>
+                <h2 onclick="scrollToElement('about')"><i class="fa-solid fa-arrow-down"></i> Learn More</h2>
+            </div>
+            <div id="spin-button">
+                <i class="fa-solid fa-arrow-down spin-icon"></i>
+                <div class="spin-text spin-top">scroll</div>
+                <div class="spin-text spin-right">down</div>
+                <div class="spin-text spin-bottom">scroll</div>
+                <div class="spin-text spin-left">down</div>
+            </div>
+            <div class="home-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+            
+        </div>
+        <div id="about">
+            <div class="left">
+                <img src="../assets/avatar.png" alt="Avatar von Eric"/>
+            </div>
+            <div class="right">
+                <h2>Über mich: Webentwickler mit einem Fokus auf persönliche Betreuung</h2>
+                <div class="text"><p>Als Webentwickler ist es mir wichtig, eine persönliche Beziehung zu meinen Kunden aufzubauen und jedes Projekt individuell zu betreuen. Ich arbeite hart daran, sicherzustellen, dass jeder Kunde ein einzigartiges und auf ihre Bedürfnisse zugeschnittenes Produkt erhält. Mit jahrelanger Erfahrung in der Entwicklung von Webanwendungen und Websites biete ich ein umfassendes technisches Know-how und eine breite Palette von Fähigkeiten an, um die besten Ergebnisse für meine Kunden zu erzielen.</p></div>      
+            </div>
+        </div>
+        <div id="angebot">
+            <div class="left">
+                <h2>Maßgeschneiderte Weblösungen nach Kundenwunsch</h2>
+                <div class="text">
+                    <p>Als Entwickler von Webapplikationen und Websites liegt mein Fokus darauf, genau das zu liefern, was meine Kunden brauchen. Ich arbeite eng mit meinen Kunden zusammen, um ihre Anforderungen und Erwartungen zu verstehen und dann individuelle und maßgeschneiderte digitale Lösungen zu entwickeln. Bei mir gibt es keine "Geht nicht" - Einstellung - ich arbeite hart daran, jedes Projekt erfolgreich abzuschließen.</p>
+                </div>  
+            </div>
+            <div class="right">
+                <div class="tagcloud-container"><div class="tagcloud"></div></div>
+            </div>
+        </div>
+        <div id="projects">
+            <h2>
+                Letztes Projekt
+            </h2>
+            <span class="header"></span>
+            <div class="screen"></div>
+        </div>
+        <div id="ablauf">
+           <h1>Ablauf</h1>
+           <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div id="contact">
+            <div class="left"></div>
+            <div class="right">
+                <h2>Du hast eine Frage, eine Idee oder ein Projekt, bei dem du Hilfe brauchst?</h2>
+                <div class="wrapper">
+                    <h3>Dann kontaktiere mich unverbindlich!</h3>
+                    <a class="email" href="mailto:eric@sommerhalder-websolutions.ch">email <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="address">
+                        <p>Sommerhalder Websolutions</p>
+                        <p>Eric Sommerhalder</p>
+                        <p>Im Nebengraben 19</p>
+                        <p>4107 Ettingen</p>
+                        <br>
+                        <p>eric@sommerhalder-websolutions.ch</p>
+                        <p>+41 79 759 34 24</p>
+                    </div>
+                </div>
+            </div>
+            <div id="spin-button-bottom">
+                <i class="fa-solid fa-arrow-up spin-bottom-icon"></i>
+                <div class="spin-text spin-bottom-top">scroll</div>
+                <div class="spin-text spin-bottom-right">up</div>
+                <div class="spin-text spin-bottom-bottom">scroll</div>
+                <div class="spin-text spin-bottom-left">up</div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="icons">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>ready for the challenge<br>eric@sommerhalder-websolutions.ch</p>
+        <p>Im Nebengraben 19, 4107 Ettingen<br>+41 79 759 34 24</p>
+        <div class="links">
+            <a href="/impressum">Impressum</a>
+            <a href="/datenschutz">Datenschutz</a>
+        </div>
+        <div class="links">
+            <p>&copy; Sommerhalder Websolutions 2023</p>
+            <a href="/agb">AGB</a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../node_modules/TagCloud/dist/TagCloud.min.js"></script>
+    <script src="sommerhalder-websolutions.js"></script>   
+</html>
