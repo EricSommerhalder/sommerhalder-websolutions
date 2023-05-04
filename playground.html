@@ -1,14 +1,17 @@
 <head>
     <link rel="stylesheet" type="text/css" href="playground.css"/>
-    
+    <script src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
     <title>Playground</title>
 </head>
 <body>
-    <input type="checkbox" id="toggle" class="toggle--checkbox">
-    <label for="toggle" class="toggle--label">
-      <span class="off">OFF</span>
-      <span class="on">ON</span>
-    </label>
-   
+  <dotlottie-player
+  autoplay
+  controls
+  loop
+  mode="normal"
+  src="./assets/anim.lottie"
+  style="width: 320px"
+>
+</dotlottie-player>
 </body>
   <script src="playground.js"></script>
