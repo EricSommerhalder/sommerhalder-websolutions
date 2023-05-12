@@ -4,8 +4,35 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="sommerhalder-websolutions.css"/>
         <script src="https://kit.fontawesome.com/ca1d8359ae.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.11.0/lottie.min.js"></script>
         <title>Sommerhalder Websolutions</title>
     </head>
+    
+    <div id="loadAnimation"></div>
+    
+    <div id="animationHelper">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" width="100%"
+  height="100%" class="anim" preserveAspectRatio="xMidYMid meet"
+  style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+  <rect x="0" y="0" width="100%" height="100%" fill="black" mask="url(#hole)"/>
+  <mask id="hole">
+    <rect id="rect" x="0" y="0" width="100%" height="100%" fill="white"/>
+    <g transform="matrix(9.935819625854492,0,0,9.935819625854492,607.944091796875,266.5264892578125)" opacity="1"
+      style="display: block;">
+      <path fill="black" fill-opacity="1"
+        d=" M24.72,16.95 C24.72,16.95 24.81,38.13 24.81,38.13 C24.81,38.13 45.95,38.23 45.95,38.23 C45.95,38.23 45.97,16.97 45.97,16.97 C45.97,16.97 24.72,16.95 24.72,16.95z">
+      </path>
+      <g opacity="1" transform="matrix(1,0,0,1,35.43299865722656,27.489999771118164)">
+        <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="1"
+          stroke="black" stroke-opacity="1" stroke-width="0.75"
+          d=" M-10.715999603271484,-10.543000221252441 C-10.715999603271484,-10.543000221252441 -10.619000434875488,10.642999649047852 -10.619000434875488,10.642999649047852 C-10.619000434875488,10.642999649047852 10.515000343322754,10.744000434875488 10.515000343322754,10.744000434875488 C10.515000343322754,10.744000434875488 10.541999816894531,-10.517000198364258 10.541999816894531,-10.517000198364258 C10.541999816894531,-10.517000198364258 -10.715999603271484,-10.543000221252441 -10.715999603271484,-10.543000221252441z">
+        </path>
+      </g>
+    </g>
+  </mask>
+</svg>
+    </div>
+
     <body>
         <header class="navbar">
             <a onclick="scrollToElement('home')"><img src="../assets/SWS_Logo_Standard_rgb.png"/></a>
@@ -26,7 +53,7 @@
         <div id="home">
             <div class="left"></div>
             <div class="right">
-                <h1>Individuelle Websites und Webapplikationen made in Basel</h1>
+                <h1>Individuelle Websites und Applikationen made in Basel</h1>
                 <h2 onclick="scrollToElement('about')"><i class="fa-solid fa-arrow-down"></i> Learn More</h2>
             </div>
             <div id="spin-button">
@@ -35,12 +62,15 @@
                 <div class="spin-text spin-right">down</div>
                 <div class="spin-text spin-bottom">scroll</div>
                 <div class="spin-text spin-left">down</div>
-            </div>
-            <div class="home-icons">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-linkedin"></i>
-            </div>
-            
+            </div>  
+        </div>
+        <div class="home-icons icons-black">
+            <img src="../assets/Instagram_schwarz.svg"/>
+            <img src="../assets/LinkedIn_schwarz.svg"/>
+        </div>
+        <div class="home-icons icons-white">
+            <img src="../assets/Instagram_weiss.svg"/>
+            <img src="../assets/LinkedIn_weiss.svg"/>
         </div>
         <div id="about">
             <div class="left">
@@ -67,7 +97,9 @@
                 Letztes Projekt
             </h2>
             <span class="header"></span>
-            <div class="screen"></div>
+            <div class="screen">
+                <video src="../assets/michelle-heimberg-placeholder.mov" autoplay muted loop></video>
+            </div>
         </div>
         <div id="ablauf">
            <h1>Ablauf</h1>
@@ -83,7 +115,9 @@
             <br>
         </div>
         <div id="contact">
-            <div class="left"></div>
+            <div class="left">
+                <img src="../assets/box_lampe_schwarz.svg"/>
+            </div>
             <div class="right">
                 <h2>Du hast eine Frage, eine Idee oder ein Projekt, bei dem du Hilfe brauchst?</h2>
                 <div class="wrapper">
@@ -108,23 +142,28 @@
                 <div class="spin-text spin-bottom-left">up</div>
             </div>
         </div>
+        <footer>
+            <div class="icons icons-black">
+                <img src="../assets/Instagram_schwarz.svg"/>
+                <img src="../assets/LinkedIn_schwarz.svg"/>
+            </div>
+            <div class="icons icons-white">
+                <img src="../assets/Instagram_weiss.svg"/>
+                <img src="../assets/LinkedIn_weiss.svg"/>
+            </div>
+            <p>ready for the challenge<br>eric@sommerhalder-websolutions.ch</p>
+            <p>Im Nebengraben 19, 4107 Ettingen<br>+41 79 759 34 24</p>
+            <div class="links">
+                <a href="/impressum">Impressum</a>
+                <a href="/datenschutz">Datenschutz</a>
+            </div>
+            <div class="links">
+                <p>&copy; Sommerhalder Websolutions 2023</p>
+                <a href="/agb">AGB</a>
+            </div>
+        </footer>
     </body>
-    <footer>
-        <div class="icons">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
-        </div>
-        <p>ready for the challenge<br>eric@sommerhalder-websolutions.ch</p>
-        <p>Im Nebengraben 19, 4107 Ettingen<br>+41 79 759 34 24</p>
-        <div class="links">
-            <a href="/impressum">Impressum</a>
-            <a href="/datenschutz">Datenschutz</a>
-        </div>
-        <div class="links">
-            <p>&copy; Sommerhalder Websolutions 2023</p>
-            <a href="/agb">AGB</a>
-        </div>
-    </footer>
+    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/TagCloud@2.3.2/dist/TagCloud.min.js"></script>
     <script src="sommerhalder-websolutions.js"></script>   
 </html>
