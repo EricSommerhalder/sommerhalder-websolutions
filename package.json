@@ -12,6 +12,7 @@
   "author": "Eric Sommerhalder",
   "license": "ISC",
   "dependencies": {
+    "smoothscroll-polyfill": "^0.4.4",
     "TagCloud": "^2.3.2"
   }
 }

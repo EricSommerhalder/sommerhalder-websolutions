@@ -1,3 +1,5 @@
+//smoothscroll.polyfill();
+
 /**
  * Loads animation into its div and plays it.
  */
@@ -115,12 +117,13 @@ function switchTheme(event) {
   const spinButton = document.querySelector("#spin-button");
   const spinButtonBottom = document.querySelector("#spin-button-bottom");
   const scrollPosition = window.scrollY;
+  const scrollPositionBottom = -(document.documentElement.scrollHeight - window.innerHeight - window.scrollY);
   const spinIcon = document.getElementsByClassName("spin-icon")[0];
   const spinIconBottom = document.getElementsByClassName("spin-bottom-icon")[0];
   spinButton.style.transform = `rotate(${scrollPosition/2}deg)`;
   spinIcon.style.transform = `rotate(${-scrollPosition/2}deg)`;
-  spinButtonBottom.style.transform = `rotate(${scrollPosition/2}deg)`;
-  spinIconBottom.style.transform = `rotate(${-scrollPosition/2}deg)`;
+  spinButtonBottom.style.transform = `rotate(${scrollPositionBottom/2}deg)`;
+  spinIconBottom.style.transform = `rotate(${-scrollPositionBottom/2}deg)`;
 });
 
 /**
