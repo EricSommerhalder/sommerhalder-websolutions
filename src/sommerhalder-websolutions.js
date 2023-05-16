@@ -25,14 +25,14 @@
      const rect = document.getElementById("rect").getBoundingClientRect();
 const temp = document.createElement('div');
 temp.style.pointerEvents = "none";
-temp.style.width = (rect.width -5) + "px";
+temp.style.width = (rect.width - 10) + "px";
   temp.style.position = "fixed";
-  temp.style.height = (rect.height -5) + "px";
-  temp.style.left = rect.left + "px";
-  temp.style.top = rect.top + "px";
+  temp.style.height = (rect.height - 10) + "px";
+  temp.style.left = (rect.left + 5) + "px";
+  temp.style.top = (rect.top + 5) + "px";
   temp.style.zIndex = "5";
   temp.style.boxShadow = "0px 0px 0px 999999px black";
-  temp.style.animation = "expand 3s ease-in-out forwards";
+  temp.style.animation = "expand 2s ease-in-out forwards";
   temp.addEventListener("animationend", function(){
     temp.style.display = "none";
     helper.style.display = "none";
