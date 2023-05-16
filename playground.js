@@ -14,7 +14,7 @@ let object;
 // Load the OBJ file
 const loader = new THREE.ObjectLoader();
 loader.load(
-  'assets/12221_Cat_v1_l3.obj',
+  'assets/test.json',
   function (object) {
     // Position, scale, or manipulate the loaded object as needed
     object.position.set(0, 0, 0);
