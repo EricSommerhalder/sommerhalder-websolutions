@@ -14,16 +14,19 @@ let object;
 // Load the OBJ file
 const loader = new THREE.ObjectLoader();
 loader.load(
-  'assets/test.json',
-  function (object) {
+  'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/test.json',
+  function (loadedObject) {
     // Position, scale, or manipulate the loaded object as needed
+    object = loadedObject;
     object.position.set(0, 0, 0);
     object.scale.set(1, 1, 1);
     scene.add(object);
+    console.log(object);
   },
   function (xhr) {
     // Progress callback
     console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+    
   },
   function (error) {
     // Error callback
