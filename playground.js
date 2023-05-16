@@ -14,7 +14,7 @@ let object;
 // Load the OBJ file
 const loader = new THREE.ObjectLoader();
 loader.load(
-  'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/outfile.js',
+  'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/outfile.json',
   function (loadedObject) {
     // Position, scale, or manipulate the loaded object as needed
     object = loadedObject;
