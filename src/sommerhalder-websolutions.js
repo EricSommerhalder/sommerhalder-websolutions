@@ -24,6 +24,7 @@
      helper.style.display="block";
      const rect = document.getElementById("rect").getBoundingClientRect();
 const temp = document.createElement('div');
+temp.style.pointerEvents = "none";
 temp.style.width = (rect.width -5) + "px";
   temp.style.position = "fixed";
   temp.style.height = (rect.height -5) + "px";
