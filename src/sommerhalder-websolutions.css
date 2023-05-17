@@ -332,9 +332,14 @@ h2, h3, h4, h5, h6, i {
 #projects h2 {
   font-size: 55px;
 }
-
-#projects .header {
-  width: calc(70% - 2px);
+#tv {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#tv .header {
+  width: calc(100% - 2px);
   height: 50px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -342,8 +347,8 @@ h2, h3, h4, h5, h6, i {
   background-color: white;
 }
 
-#projects .screen {
-  width: 70%;
+#tv .screen {
+  width: 100%;
   aspect-ratio: 1960/1080;
   background: var(--screen-color);
   display: flex;
@@ -555,4 +560,17 @@ footer p {
 
 #animationHelper {
   pointer-events: none;
-} 
+}
+
+/* Micro animations */
+
+.animated-element {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}

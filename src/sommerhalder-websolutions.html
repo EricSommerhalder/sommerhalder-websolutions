@@ -8,7 +8,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.3.6/smoothscroll.min.js"></script>
         <title>Sommerhalder Websolutions</title>
     </head>
-    
+    <!--
     <div id="loadAnimation"></div>
     
     <div id="animationHelper">
@@ -33,7 +33,7 @@
   </mask>
 </svg>
     </div>
-
+-->
     <body>
         <header class="navbar">
             <a onclick="scrollToElement('home')"><img src="../assets/SWS_Logo_Standard_rgb.png"/></a>
@@ -73,7 +73,7 @@
             <img src="../assets/Instagram_weiss.svg"/>
             <img src="../assets/LinkedIn_weiss.svg"/>
         </div>
-        <div id="about">
+        <div id="about" class="animated-element">
             <div class="left">
                 <img src="../assets/avatar.png" alt="Avatar von Eric"/>
             </div>
@@ -82,7 +82,7 @@
                 <div class="text"><p>Als Webentwickler ist es mir wichtig, eine persönliche Beziehung zu meinen Kunden aufzubauen und jedes Projekt individuell zu betreuen. Ich arbeite hart daran, sicherzustellen, dass jeder Kunde ein einzigartiges und auf ihre Bedürfnisse zugeschnittenes Produkt erhält. Mit jahrelanger Erfahrung in der Entwicklung von Webanwendungen und Websites biete ich ein umfassendes technisches Know-how und eine breite Palette von Fähigkeiten an, um die besten Ergebnisse für meine Kunden zu erzielen.</p></div>      
             </div>
         </div>
-        <div id="angebot">
+        <div id="angebot" class="animated-element">
             <div class="left">
                 <h2>Maßgeschneiderte Weblösungen nach Kundenwunsch</h2>
                 <div class="text">
@@ -93,16 +93,20 @@
                 <div class="tagcloud-container"><div class="tagcloud"></div></div>
             </div>
         </div>
-        <div id="projects">
+        <div id="projects" class="animated-element">
             <h2>
                 Letztes Projekt
             </h2>
-            <span class="header"></span>
-            <div class="screen">
-                <video src="../assets/michelle-heimberg-placeholder.mov" autoplay muted loop></video>
+            <div id="tv">
+                <span class="header" id="toolbar"></span>
+                <div class="screen" id="screen">
+                    <video src="../assets/michelle-heimberg-placeholder.mov" autoplay muted loop></video>
+                </div>
             </div>
+            
+            
         </div>
-        <div id="ablauf">
+        <div id="ablauf" class="animated-element">
            <h1>Ablauf</h1>
            <br>
             <br>
@@ -115,7 +119,7 @@
             <br>
             <br>
         </div>
-        <div id="contact">
+        <div id="contact" class="animated-element">
             <div class="left">
                 <img src="../assets/box_lampe_schwarz.svg"/>
             </div>

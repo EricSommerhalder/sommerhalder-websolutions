@@ -151,15 +151,50 @@ const options = {"radius": 300};
 
 TagCloud(container, texts, options);
 
-/*if (rect.left != 0){
-  const temp = document.createElement('div');
-  temp.style.width = (rect.left + 1) + "px";
-  temp.style.position = "fixed";
-  temp.style.height = "100%";
-  temp.style.left = "0";
-  temp.style.top ="0";
-  temp.style.backgroundColor = "black";
-  temp.style.zIndex = "5"
-  console.log(document.body);
-  document.body.appendChild(temp);
-*/
+/**
+ * Micro animations
+ */
+const elements = document.querySelectorAll('.animated-element');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle('animate', entry.isIntersecting);
+  });
+});
+
+elements.forEach(element => {
+  observer.observe(element);
+});
+
+/**
+ * tv tilting animation
+ */
+
+ const tv = document.getElementById('tv');
+ const projects = document.getElementById('projects');
+ const THRESHOLD = 7;
+ tv.style.transformOrigin = "center"; 
+ function tvHandleHover(e){
+    const {clientX, clientY, currentTarget} = e;
+    const {clientWidth, clientHeight, offsetLeft, offsetTop} = currentTarget;
+    const horizontal = (clientX - offsetLeft) / clientWidth;
+    const vertical = (clientY - offsetTop) / clientHeight;
+    const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
+    const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+    
+    tv.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+  }
+
+  function handleTvOrientation(event) {
+    const { beta, gamma } = event;
+    const rotateX = (beta * THRESHOLD / 90).toFixed(2);
+    const rotateY = (gamma * THRESHOLD / 90).toFixed(2);
+  
+    tv.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1, 1, 1)`;
+  }
+ function resetTvStyles(e){
+  tv.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+ }
+
+ tv.addEventListener("mousemove", tvHandleHover);
+ tv.addEventListener("mouseleave", resetTvStyles);
+ window.addEventListener("deviceorientation", handleTvOrientation);
