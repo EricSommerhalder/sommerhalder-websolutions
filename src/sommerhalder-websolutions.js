@@ -168,7 +168,7 @@ elements.forEach(element => {
 /**
  * tv tilting animation
  */
-
+/*
  const tv = document.getElementById('tv');
  const projects = document.getElementById('projects');
  const THRESHOLD = 7;
@@ -198,3 +198,73 @@ elements.forEach(element => {
  tv.addEventListener("mousemove", tvHandleHover);
  tv.addEventListener("mouseleave", resetTvStyles);
  window.addEventListener("deviceorientation", handleTvOrientation);
+ */
+
+ /**
+  * ablauf scrolling
+  */
+
+  /*function debounce(callback, delay) {
+    let timerId = null;
+    let shouldExecuteImmediately = true;
+  
+    return function(...args) {
+      clearTimeout(timerId);
+  
+      if (shouldExecuteImmediately) {
+        callback.apply(this, args);
+        shouldExecuteImmediately = false;
+      }
+  
+      timerId = setTimeout(() => {
+        shouldExecuteImmediately = true;
+      }, delay);
+    };
+  }
+  
+  var ablaufDiv = document.getElementById("ablauf");
+  console.log(getHorizontalScrollAmount(document.getElementById("ablauf2")));
+  var currentFrame = 1;
+  
+  const handleAblaufScroll = debounce((event) => {
+    event.preventDefault();
+    event.stopPropagation();
+  
+    if (event.deltaY < 0 && currentFrame > 1){
+      event.preventDefault();
+      currentFrame--;
+      console.log("scrolled to", currentFrame);
+    } else if (event.deltaY > 0 && currentFrame < 4){
+      event.preventDefault();
+      currentFrame++;
+      console.log("scrolled to", currentFrame);
+    } 
+  }, 40);
+  
+  ablaufDiv.addEventListener("wheel", (event) => {
+    handleAblaufScroll(event);
+  });
+
+  
+  ablaufDiv.addEventListener("wheel", (event) => {handleAblaufScroll(event);});
+
+  function getHorizontalScrollAmount(element) {
+    var rect = element.getBoundingClientRect();
+    var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    return rect.left + scrollLeft;
+  }*/
+
+  /**
+   * beer animation
+   */
+   const anim1Div = document.getElementById("lottie-animation-1");
+   let anim1 = lottie.loadAnimation({
+       container: animationDiv, // the dom element that will contain the animation
+       renderer: 'svg',
+       loop: false,
+       autoplay: true,
+       path: 'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json', // the path to the animation json
+       rendererSettings: {
+        className: 'anim'
+    }
+      });

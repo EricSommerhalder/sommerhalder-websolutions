@@ -28,7 +28,10 @@ body {
   scroll-behavior: smooth;
 }
 
-h2, h3, h4, h5, h6, i {
+h2 {
+  font-weight: 600;
+}
+h3, h4, h5, h6, i {
   font-weight: 300;
 }
 /* Navbar Styling */
@@ -574,3 +577,48 @@ footer p {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ablauf styling */
+#ablauf {
+  /*white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;*/
+  margin-bottom: 200px;
+  margin-left: 100px;
+}
+
+#ablauf h2 {
+  font-size: 55px;
+}
+
+#ablauf .ablauf-container {
+  display: flex;
+}
+
+.count {
+  font-weight: 600;
+  font-size: 155px;
+}
+
+.section-header {
+  font-weight: 600;
+  font-size: 55px;
+}
+
+.ablauf-text {
+  font-weight: 300;
+  font-size: 25px;
+}
+
+#ablauf1 {
+
+}
+
+/*#ablauf::-webkit-scrollbar {
+  display: none;
+}*/
+
+/*#ablauf div {
+  display: inline-block;
+}*/
