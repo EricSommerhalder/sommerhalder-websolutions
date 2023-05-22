@@ -310,7 +310,7 @@ LottieScrollTrigger({
 });
 LottieScrollTrigger({
   target: "#lottie-animation-2",
-  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/illu_ablauf-assets 3.json",
   speed: "fast",
   scrub: 1, // seconds it takes for the playhead to "catch up"
   pin: false,
