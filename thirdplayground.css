@@ -1,0 +1,68 @@
+/* Most of these styles could be removed but are for the demo to look better */
+
+html,
+body {
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+}
+
+#ablauf {
+  margin-bottom: 200px;
+  /*margin-left: 100px;*/
+}
+
+#panels-container {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+}
+#panels-container .panel {
+  position: relative;
+  width: 30%;
+  height: 50vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*margin-right: 10%;*/
+}
+
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 30px;
+  margin-top: 232px;
+}
+.count {
+  font-weight: 600;
+  font-size: 155px;
+  margin: 0;
+}
+
+.section-header {
+  font-weight: 600;
+  font-size: 55px;
+  margin: 0;
+}
+
+.ablauf-text {
+  font-weight: 300;
+  font-size: 25px;
+}
+
+#lottie-animation-1 {
+  height: 60%;
+  position: absolute;
+  top:0;
+  right: -150px;
+}

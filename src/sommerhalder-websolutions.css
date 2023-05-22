@@ -27,6 +27,13 @@ html {
 body {
   scroll-behavior: smooth;
 }
+html,
+body {
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+}
 
 h2 {
   font-weight: 600;
@@ -579,31 +586,57 @@ footer p {
 }
 
 /* ablauf styling */
-#ablauf {
+#panels {
   /*white-space: nowrap;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;*/
   margin-bottom: 200px;
+  /*margin-left: 100px;*/
+}
+
+#panels h2 {
+  font-size: 55px;
   margin-left: 100px;
 }
 
-#ablauf h2 {
-  font-size: 55px;
-}
 
-#ablauf .ablauf-container {
+#panels #panels-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0;
+}
+#panels #panels-container .paneltino {
+  position: relative;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 100px;
 }
 
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px;
+  align-items: flex-start;
+  margin-top: 108px;
+
+}
 .count {
   font-weight: 600;
   font-size: 155px;
+  margin: 0;
 }
 
 .section-header {
   font-weight: 600;
   font-size: 55px;
+  margin: 0;
 }
 
 .ablauf-text {
@@ -611,9 +644,18 @@ footer p {
   font-size: 25px;
 }
 
-#ablauf1 {
+#lottie-animation-1, #lottie-animation-2, #lottie-animation-3, #lottie-animation-4, #lottie-animation-5 {
+  width: 50%;
+  position: absolute;
+  top: -120px;
+  right: 0;
+}
+
+.content-wrapper {
+    display: flex;
 
 }
+
 
 /*#ablauf::-webkit-scrollbar {
   display: none;

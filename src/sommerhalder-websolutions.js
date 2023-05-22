@@ -4,83 +4,84 @@
  * Loads animation into its div and plays it.
  */
 
- const animationDiv = document.getElementById("loadAnimation");
- let anim = lottie.loadAnimation({
-     container: animationDiv, // the dom element that will contain the animation
-     renderer: 'svg',
-     loop: false,
-     autoplay: true,
-     path: 'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/loading_animation.json', // the path to the animation json
-     rendererSettings: {
-      className: 'anim'
+const animationDiv = document.getElementById("loadAnimation");
+let anim = lottie.loadAnimation({
+  container: animationDiv, // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: false,
+  autoplay: true,
+  path: 'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/loading_animation.json', // the path to the animation json
+  rendererSettings: {
+    className: 'anim'
   }
-    });
- let done = false;
- anim.onEnterFrame = function(e){
-   /**/
-   if (e.currentTime > 120 && !done){
-     const helper = document.getElementById("animationHelper");
-     
-     //animationDiv.classList.add("fade-out");
-     anim.goToAndStop(120, true);
-     helper.style.display="block";
-     const rect = document.getElementById("rect").getBoundingClientRect();
-const temp = document.createElement('div');
-temp.style.pointerEvents = "none";
-temp.style.width = (rect.width - 10) + "px";
-  temp.style.position = "fixed";
-  temp.style.height = (rect.height - 10) + "px";
-  temp.style.left = (rect.left + 5) + "px";
-  temp.style.top = (rect.top + 5) + "px";
-  temp.style.zIndex = "5";
-  temp.style.boxShadow = "0px 0px 0px 999999px black";
-  temp.style.animation = "expand 2s ease-in-out forwards";
-  temp.addEventListener("animationend", function(){
-    temp.style.display = "none";
-    helper.style.display = "none";
-  })
-  document.body.appendChild(temp);
-     console.log("Reached");
-    animationDiv.style.display = 'none';
-    window.scrollTo({
-      top: 0
-    });
-    
-     /*const svgData = anim.renderer.svgElement.outerHTML;
-     console.log(svgData);
-     const squareDiv = document.createElement('div');
-     squareDiv.innerHTML = `
-     <svg viewBox="${anim.renderer.svgElement.getAttribute('viewBox')}" width="${anim.renderer.svgElement.getAttribute('width')}" height="${anim.renderer.svgElement.getAttribute('height')}" xmlns="http://www.w3.org/2000/svg">
-       <rect x="0" y="0" width="100%" height="100%" fill-opactiy="0"/>
-       ${svgData.replace('fill-opacity="1"', 'fill-opacity="0"')}
-     </svg>
-   `;
-   squareDiv.style.zIndex = 11;
-   squareDiv.style.position = 'fixed';
-   squareDiv.style.top = `0`;
-squareDiv.style.left = `0`;
-   document.body.appendChild(squareDiv);
-     done = true;
-     const square = document.getElementsByTagName('g')[2];
-     
-     const box = square.getBoundingClientRect();
-     console.log(box);
-     //const svg = document.createElement('svg');
-     //svg.appendChild(square);
-     //helper.appendChild(svg);
-     var styleElem = document.head.appendChild(document.createElement("style"));
-     styleElem.innerHTML = `#animationHelper::before {top: ${box.top}px; left: ${box.left}px; width: ${box.width}px; height: ${box.height}px;}`;*/
-   }};
-  anim.onComplete = function(){
+});
+let done = false;
+anim.onEnterFrame = function (e) {
+  /**/
+  if (e.currentTime > 120 && !done) {
+    const helper = document.getElementById("animationHelper");
+
+    //animationDiv.classList.add("fade-out");
+    anim.goToAndStop(120, true);
+    helper.style.display = "block";
+    const rect = document.getElementById("rect").getBoundingClientRect();
+    const temp = document.createElement('div');
+    temp.style.pointerEvents = "none";
+    temp.style.width = (rect.width - 10) + "px";
+    temp.style.position = "fixed";
+    temp.style.height = (rect.height - 10) + "px";
+    temp.style.left = (rect.left + 5) + "px";
+    temp.style.top = (rect.top + 5) + "px";
+    temp.style.zIndex = "5";
+    temp.style.boxShadow = "0px 0px 0px 999999px black";
+    temp.style.animation = "expand 2s ease-in-out forwards";
+    temp.addEventListener("animationend", function () {
+      temp.style.display = "none";
+      helper.style.display = "none";
+    })
+    document.body.appendChild(temp);
     console.log("Reached");
     animationDiv.style.display = 'none';
     window.scrollTo({
       top: 0
     });
+
+    /*const svgData = anim.renderer.svgElement.outerHTML;
+    console.log(svgData);
+    const squareDiv = document.createElement('div');
+    squareDiv.innerHTML = `
+    <svg viewBox="${anim.renderer.svgElement.getAttribute('viewBox')}" width="${anim.renderer.svgElement.getAttribute('width')}" height="${anim.renderer.svgElement.getAttribute('height')}" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="100%" height="100%" fill-opactiy="0"/>
+      ${svgData.replace('fill-opacity="1"', 'fill-opacity="0"')}
+    </svg>
+  `;
+  squareDiv.style.zIndex = 11;
+  squareDiv.style.position = 'fixed';
+  squareDiv.style.top = `0`;
+squareDiv.style.left = `0`;
+  document.body.appendChild(squareDiv);
+    done = true;
+    const square = document.getElementsByTagName('g')[2];
+    
+    const box = square.getBoundingClientRect();
+    console.log(box);
+    //const svg = document.createElement('svg');
+    //svg.appendChild(square);
+    //helper.appendChild(svg);
+    var styleElem = document.head.appendChild(document.createElement("style"));
+    styleElem.innerHTML = `#animationHelper::before {top: ${box.top}px; left: ${box.left}px; width: ${box.width}px; height: ${box.height}px;}`;*/
   }
- /*window.addEventListener('animationend', function() {
-   console.log("reached");
+};
+anim.onComplete = function () {
+  console.log("Reached");
   animationDiv.style.display = 'none';
+  window.scrollTo({
+    top: 0
+  });
+}
+/*window.addEventListener('animationend', function() {
+  console.log("reached");
+ animationDiv.style.display = 'none';
 });*/
 
 /**
@@ -88,9 +89,9 @@ squareDiv.style.left = `0`;
  * @param id id of the html element to scroll to.
  */
 
-function scrollToElement(id){
+function scrollToElement(id) {
   window.scrollTo({
-    top: document.getElementById(id).offsetTop - 133 ,
+    top: document.getElementById(id).offsetTop - 133,
     behavior: 'smooth'
   });
 }
@@ -113,41 +114,41 @@ function switchTheme(event) {
  * Sets up event listener for the spin button
  */
 
- window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   const spinButton = document.querySelector("#spin-button");
   const spinButtonBottom = document.querySelector("#spin-button-bottom");
   const scrollPosition = window.scrollY;
   const scrollPositionBottom = -(document.documentElement.scrollHeight - window.innerHeight - window.scrollY);
   const spinIcon = document.getElementsByClassName("spin-icon")[0];
   const spinIconBottom = document.getElementsByClassName("spin-bottom-icon")[0];
-  spinButton.style.transform = `rotate(${scrollPosition/2}deg)`;
-  spinIcon.style.transform = `rotate(${-scrollPosition/2}deg)`;
-  spinButtonBottom.style.transform = `rotate(${scrollPositionBottom/2}deg)`;
-  spinIconBottom.style.transform = `rotate(${-scrollPositionBottom/2}deg)`;
+  spinButton.style.transform = `rotate(${scrollPosition / 2}deg)`;
+  spinIcon.style.transform = `rotate(${-scrollPosition / 2}deg)`;
+  spinButtonBottom.style.transform = `rotate(${scrollPositionBottom / 2}deg)`;
+  spinIconBottom.style.transform = `rotate(${-scrollPositionBottom / 2}deg)`;
 });
 
 /**
  * Sets up TagCloud
  */
 const container = '.tagcloud';
-const texts = [ 'Elm',
-                'React',
-                'Angular',
-                'Typescript',
-                'Javascript',
-                'CSS',
-                'HTML',
-                'Svelte',
-                'Python',
-                'C++',
-                'C#',
-                'C',
-                'Java',
-                'SQL',
-                'PHP'
+const texts = ['Elm',
+  'React',
+  'Angular',
+  'Typescript',
+  'Javascript',
+  'CSS',
+  'HTML',
+  'Svelte',
+  'Python',
+  'C++',
+  'C#',
+  'C',
+  'Java',
+  'SQL',
+  'PHP'
 
 ];
-const options = {"radius": 300};
+const options = { "radius": 300 };
 
 TagCloud(container, texts, options);
 
@@ -200,71 +201,188 @@ elements.forEach(element => {
  window.addEventListener("deviceorientation", handleTvOrientation);
  */
 
- /**
-  * ablauf scrolling
-  */
+/**
+ * ablauf scrolling
+ */
 
-  /*function debounce(callback, delay) {
-    let timerId = null;
-    let shouldExecuteImmediately = true;
-  
-    return function(...args) {
-      clearTimeout(timerId);
-  
-      if (shouldExecuteImmediately) {
-        callback.apply(this, args);
-        shouldExecuteImmediately = false;
-      }
-  
-      timerId = setTimeout(() => {
-        shouldExecuteImmediately = true;
-      }, delay);
-    };
-  }
-  
-  var ablaufDiv = document.getElementById("ablauf");
-  console.log(getHorizontalScrollAmount(document.getElementById("ablauf2")));
-  var currentFrame = 1;
-  
-  const handleAblaufScroll = debounce((event) => {
-    event.preventDefault();
-    event.stopPropagation();
-  
-    if (event.deltaY < 0 && currentFrame > 1){
-      event.preventDefault();
-      currentFrame--;
-      console.log("scrolled to", currentFrame);
-    } else if (event.deltaY > 0 && currentFrame < 4){
-      event.preventDefault();
-      currentFrame++;
-      console.log("scrolled to", currentFrame);
-    } 
-  }, 40);
-  
-  ablaufDiv.addEventListener("wheel", (event) => {
-    handleAblaufScroll(event);
-  });
-
-  
-  ablaufDiv.addEventListener("wheel", (event) => {handleAblaufScroll(event);});
-
-  function getHorizontalScrollAmount(element) {
-    var rect = element.getBoundingClientRect();
-    var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-    return rect.left + scrollLeft;
-  }*/
-
-  /**
-   * beer animation
-   */
-   const anim1Div = document.getElementById("lottie-animation-1");
-   let anim1 = lottie.loadAnimation({
-       container: animationDiv, // the dom element that will contain the animation
-       renderer: 'svg',
-       loop: false,
-       autoplay: true,
-       path: 'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json', // the path to the animation json
-       rendererSettings: {
-        className: 'anim'
+/*function debounce(callback, delay) {
+  let timerId = null;
+  let shouldExecuteImmediately = true;
+ 
+  return function(...args) {
+    clearTimeout(timerId);
+ 
+    if (shouldExecuteImmediately) {
+      callback.apply(this, args);
+      shouldExecuteImmediately = false;
     }
+ 
+    timerId = setTimeout(() => {
+      shouldExecuteImmediately = true;
+    }, delay);
+  };
+}
+ 
+var ablaufDiv = document.getElementById("ablauf");
+console.log(getHorizontalScrollAmount(document.getElementById("ablauf2")));
+var currentFrame = 1;
+ 
+const handleAblaufScroll = debounce((event) => {
+  event.preventDefault();
+  event.stopPropagation();
+ 
+  if (event.deltaY < 0 && currentFrame > 1){
+    event.preventDefault();
+    currentFrame--;
+    console.log("scrolled to", currentFrame);
+  } else if (event.deltaY > 0 && currentFrame < 4){
+    event.preventDefault();
+    currentFrame++;
+    console.log("scrolled to", currentFrame);
+  } 
+}, 40);
+ 
+ablaufDiv.addEventListener("wheel", (event) => {
+  handleAblaufScroll(event);
+});
+
+ 
+ablaufDiv.addEventListener("wheel", (event) => {handleAblaufScroll(event);});
+
+function getHorizontalScrollAmount(element) {
+  var rect = element.getBoundingClientRect();
+  var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  return rect.left + scrollLeft;
+}*/
+
+/**
+ * beer animation
+ */
+/*const anim1Div = document.getElementById("lottie-animation-1");
+let anim1 = lottie.loadAnimation({
+    container: anim1Div, // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: 'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json', // the path to the animation json
+    rendererSettings: {
+ }
+   });
+
+   /**
+    * Scrolling
+    */
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+/* Main navigation */
+let panelsSection = document.querySelector("#panels"),
+  panelsContainer = document.querySelector("#panels-container"),
+  tween;
+
+/* Panels */
+const panels = gsap.utils.toArray("#panels-container .paneltino");
+tween = gsap.to(panels, {
+  xPercent: -100 * (panels.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#panels-container",
+    pin: true,
+    start: "center center",
+    scrub: 1,
+    /*
+    snap: {
+      snapTo: 1 / (panels.length - 1),
+      inertia: false,
+      duration: {min: 0.1, max: 0.1}
+    },*/
+    end: () => "+=" + (panelsContainer.offsetWidth - innerWidth)
+  }
+});
+
+LottieScrollTrigger({
+  target: "#lottie-animation-1",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
+  speed: "fast",
+  scrub: 1, // seconds it takes for the playhead to "catch up"
+  pin: false,
+  insideContainer: false,
+  trigger: "#panel1"
+  // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
+});
+LottieScrollTrigger({
+  target: "#lottie-animation-2",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
+  speed: "fast",
+  scrub: 1, // seconds it takes for the playhead to "catch up"
+  pin: false,
+  insideContainer: true,
+  trigger: "#panel2"
+  // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
+});
+LottieScrollTrigger({
+  target: "#lottie-animation-3",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
+  speed: "fast",
+  scrub: 1, // seconds it takes for the playhead to "catch up"
+  pin: false,
+  insideContainer: true,
+  trigger: "#panel3"
+  // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
+});
+LottieScrollTrigger({
+  target: "#lottie-animation-4",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
+  speed: "fast",
+  scrub: 1, // seconds it takes for the playhead to "catch up"
+  pin: false,
+  insideContainer: true,
+  trigger: "#panel4"
+  // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
+});
+LottieScrollTrigger({
+  target: "#lottie-animation-5",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
+  speed: "fast",
+  scrub: 1, // seconds it takes for the playhead to "catch up"
+  pin: false,
+  insideContainer: true,
+  trigger: "#panel5"
+  // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
+});
+
+function LottieScrollTrigger(vars) {
+  let playhead = { frame: 0 },
+    target = gsap.utils.toArray(vars.target)[0],
+    speeds = { slow: "+=2000", medium: "+=1000", fast: "+=500" },
+    st = { trigger: [vars.trigger] || target, pin: false, start: "top center", end: speeds[vars.speed] || "+=1000", scrub: 1 },
+    ctx = gsap.context && gsap.context(),
+    animation = lottie.loadAnimation({
+      container: target,
+      renderer: vars.renderer || "svg",
+      loop: false,
+      autoplay: false,
+      path: vars.path,
+      rendererSettings: vars.rendererSettings || { preserveAspectRatio: 'xMidYMid slice' }
+    });
+  for (let p in vars) { // let users override the ScrollTrigger defaults
+    st[p] = vars[p];
+  }
+  if (vars.insideContainer){
+    st["containerAnimation"]= tween;
+  }
+  animation.addEventListener("DOMLoaded", function () {
+    let createTween = function () {
+      animation.frameTween = gsap.to(playhead, {
+        frame: animation.totalFrames - 1,
+        ease: "none",
+        onUpdate: () => animation.goToAndStop(playhead.frame, true),
+        scrollTrigger: st,
       });
+      return () => animation.destroy && animation.destroy();
+    };
+    ctx && ctx.add ? ctx.add(createTween) : createTween();
+    // in case there are any other ScrollTriggers on the page and the loading of this Lottie asset caused layout changes
+    ScrollTrigger.sort();
+    ScrollTrigger.refresh();
+  });
+  return animation;
+}

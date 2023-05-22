@@ -6,10 +6,13 @@
     <link rel="stylesheet" type="text/css" href="sommerhalder-websolutions.css" />
     <script src="https://kit.fontawesome.com/ca1d8359ae.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.11.0/lottie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.3.6/smoothscroll.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.3.6/smoothscroll.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <title>Sommerhalder Websolutions</title>
 </head>
-<!--
+
     <div id="loadAnimation"></div>
     
     <div id="animationHelper">
@@ -34,7 +37,7 @@
   </mask>
 </svg>
     </div>
--->
+
 
 <body>
     <header class="navbar">
@@ -120,23 +123,109 @@
 
 
     </div>
-    <div id="ablauf" class="animated-element">
-        <h2>Ablauf</h2>
-        <div class="ablauf-container">
-            <div id="ablauf1">
-                <p class="count">5.</p>
-                <p class="section-header">Erfolg!</p>
-                <div id="lottie-animation-1"></div>
-                <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den gesamten,
-                    wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen anderen
-                    Fragen. Du kannst dein Produkt jetzt aber auch unabhängig von mir benutzen.</p>
-            </div>
-            <div id="ablauf2"></div>
-            <div id="ablauf3"></div>
-            <div id="ablauf4"></div>
-            <div id="ablauf5"></div>
+    <!--
+    <div id="ablauf" class="animated-element">-->
+    <section id="panels">
+        <h2>Angebot</h2>
+        <div id="panels-container" style="width: 300%;">
+            <article class="paneltino" id="panel1">
+                <div>
+                    <div id="lottie-animation-1">
+
+                    </div>
+                    <div class="content-wrapper">
+                    <p class="count">5.</p>
+                    <div class="panel-content">
+                        <p class="section-header">Erfolg!</p>
+
+                        <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
+                            gesamten,
+                            wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
+                            anderen
+                            Fragen. Du kannst dein Produkt jetzt aber auch unabhängig von mir benutzen.</p>
+                    </div>
+                </div>
+                </div>
+            </article>
+            <article class="paneltino" id="panel2">
+                <div>
+                    <div id="lottie-animation-2">
+
+                    </div>
+                    <div class="content-wrapper">
+                    <p class="count">5.</p>
+                    <div class="panel-content">
+                        <p class="section-header">Erfolg!</p>
+
+                        <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
+                            gesamten,
+                            wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
+                            anderen
+                            Fragen. Du kannst dein Produkt jetzt aber auch unabhängig von mir benutzen.</p>
+                    </div>
+                </div>
+                </div>
+            </article>
+            <article class="paneltino" id="panel3">
+                <div>
+                    <div id="lottie-animation-3">
+
+                    </div>
+                    <div class="content-wrapper">
+                    <p class="count">5.</p>
+                    <div class="panel-content">
+                        <p class="section-header">Erfolg!</p>
+
+                        <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
+                            gesamten,
+                            wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
+                            anderen
+                            Fragen. Du kannst dein Produkt jetzt aber auch unabhängig von mir benutzen.</p>
+                    </div>
+                </div>
+                </div>
+            </article>
+            <article class="paneltino" id="panel4">
+                <div>
+                    <div id="lottie-animation-4">
+
+                    </div>
+                    <div class="content-wrapper">
+                    <p class="count">5.</p>
+                    <div class="panel-content">
+                        <p class="section-header">Erfolg!</p>
+
+                        <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
+                            gesamten,
+                            wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
+                            anderen
+                            Fragen. Du kannst dein Produkt jetzt aber auch unabhängig von mir benutzen.</p>
+                    </div>
+                </div>
+                </div>
+            </article>
+            <article class="paneltino" id="panel5">
+                <div>
+                    <div id="lottie-animation-5">
+
+                    </div>
+                    <div class="content-wrapper">
+                    <p class="count">5.</p>
+                    <div class="panel-content">
+                        <p class="section-header">Erfolg!</p>
+
+                        <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
+                            gesamten,
+                            wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
+                            anderen
+                            Fragen. Du kannst dein Produkt jetzt aber auch unabhängig von mir benutzen.</p>
+                    </div>
+                </div>
+                </div>
+            </article>
         </div>
-    </div>
+    </section>
+    <!--</div>-->
     <div id="contact" class="animated-element">
         <div class="left">
             <img src="../assets/box_lampe_schwarz.svg" />
