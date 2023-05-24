@@ -1,17 +1,17 @@
 gsap.registerPlugin(ScrollTrigger);
 LottieScrollTrigger({
     target: "#animationWindow",
-    path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
-    speed: "fast",
-    scrub: 1, // seconds it takes for the playhead to "catch up"
-    pin: false
+    path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/illu_ablauf-assets 3.json",
+    speed: "slow",
+    scrub: 2, // seconds it takes for the playhead to "catch up"
+    pin: true
     // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
    });
    
    function LottieScrollTrigger(vars) {
        let playhead = {frame: 0},
            target = gsap.utils.toArray(vars.target)[0],
-           speeds = {slow: "+=2000", medium: "+=1000", fast: "+=500"},
+           speeds = {slow: "+=2000", medium: "+=1000", fast: "+=100"},
            st = {trigger: target, pin: true, start: "top top", end: speeds[vars.speed] || "+=1000", scrub: 1},
            ctx = gsap.context && gsap.context(),
            animation = lottie.loadAnimation({

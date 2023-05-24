@@ -2,29 +2,24 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="fourthplayground.css"/>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
   </head>
   <body>
-    <article class="paneltino" id="panel1">
-        <div>
-            <div id="lottie-animation-1">
-
-            </div>
-            <div class="content-wrapper">
-
-           
-            <p class="count">5.</p>
-            <div class="panel-content">
-                <p class="section-header">Erfolg!</p>
-
-                <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
-                    gesamten,
-                    wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
-                    anderen
-                    Fragen. Du kannst dein Produkt jetzt aber auch unabhängig von mir benutzen.</p>
-            </div>
-        </div>
-        </div>
-    </article>
+    <div class="first-section">
+      <h1 style="text-align: center">Scroll to play the Lottie animation</h1>
+    </div>
+    <div class="second-section">
+      <lottie-player
+                     id="firstLottie"
+                     src="https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/illu_ablauf-assets 3.json"
+      >
+      </lottie-player>  
+    </div>
+    <div class="third-section">
+      
+    </div>
   </body>
   <script src="fourthplayground.js"></script>
 </html>

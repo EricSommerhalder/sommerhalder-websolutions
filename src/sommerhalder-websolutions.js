@@ -310,7 +310,7 @@ LottieScrollTrigger({
 });
 LottieScrollTrigger({
   target: "#lottie-animation-2",
-  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/illu_ablauf-assets 3.json",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
   speed: "fast",
   scrub: 1, // seconds it takes for the playhead to "catch up"
   pin: false,
@@ -366,7 +366,7 @@ function LottieScrollTrigger(vars) {
   for (let p in vars) { // let users override the ScrollTrigger defaults
     st[p] = vars[p];
   }
-  if (vars.insideContainer){
+  if (vars.insideContainer === true){
     st["containerAnimation"]= tween;
   }
   animation.addEventListener("DOMLoaded", function () {
@@ -386,3 +386,15 @@ function LottieScrollTrigger(vars) {
   });
   return animation;
 }
+
+LottieInteractivity.create({
+  player: "#lottie-lampe",
+  mode:"scroll",
+  actions: [
+      {
+          visibility: [0, 1.0],
+          type: 'seek',
+          frames: [0, 87],
+      },
+  ]
+});

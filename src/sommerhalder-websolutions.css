@@ -375,6 +375,7 @@ h3, h4, h5, h6, i {
 #contact {
   display: flex;
   width: 100%;
+  margin-top: 500px;
   margin-bottom: 200px;
   position: relative;
 }
@@ -385,8 +386,12 @@ h3, h4, h5, h6, i {
   justify-content: flex-end; 
 }
 
-#contact .left img {
+/*#contact .left div {
   width: 40%;
+}*/
+
+#lottie-lampe {
+  width: 80%;
 }
 
 #contact .right {
