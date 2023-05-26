@@ -300,7 +300,7 @@ tween = gsap.to(panels, {
 
 LottieScrollTrigger({
   target: "#lottie-animation-1",
-  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/speech_animation.json",
   speed: "fast",
   scrub: 1, // seconds it takes for the playhead to "catch up"
   pin: false,
