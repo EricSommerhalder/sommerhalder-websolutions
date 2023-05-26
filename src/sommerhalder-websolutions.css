@@ -655,10 +655,45 @@ footer p {
   right: -150px;
 }
 
+#lottie-animation-1 {
+  top: -230px;
+  right: -150px;
+}
+
+#lottie-animation-2 {
+  top: 430px;
+  right: -50px;
+}
+
+#lottie-animation-3 {
+  top: -230px;
+  right: -280px;
+}
+
+#lottie-animation-4 {
+  top: 350px;
+  right: -100px;
+}
+
+#lottie-animation-5 {
+  top: -300px;
+  right: -180px;
+}
+
 .content-wrapper {
     display: flex;
     width: 650px;
     position: relative;
+}
+
+.position-wrapper {
+  height: 650px;
+
+}
+
+.down {
+  align-items: flex-end;
+  display: flex;
 }
 
 
