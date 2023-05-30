@@ -14,7 +14,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <title>Sommerhalder Websolutions</title>
 </head>
-
+    <!--
     <div id="loadAnimation"></div>
     
     <div id="animationHelper">
@@ -39,16 +39,16 @@
   </mask>
 </svg>
     </div>
-
+-->
 
 <body>
     <header class="navbar">
         <a onclick="scrollToElement('home')"><img src="../assets/SWS_Logo_Standard_rgb.png" /></a>
         <div class="links">
-            <a onclick="scrollToElement('about')">About</a>
             <a onclick="scrollToElement('angebot')">Angebot</a>
             <a onclick="scrollToElement('projects')">Projekte</a>
-            <a onclick="scrollToElement('ablauf')">Ablauf</a>
+            <a onclick="scrollToElement('ablauf')">Prozess</a>
+            <a onclick="scrollToElement('about')">Eric</a>
             <a onclick="scrollToElement('contact')">Kontakt</a>
         </div>
         <input type="checkbox" id="toggle" class="toggle--checkbox">
@@ -61,8 +61,8 @@
     <div id="home">
         <div class="left"></div>
         <div class="right">
-            <h1>Individuelle Websites und Applikationen made in Basel</h1>
-            <h2 onclick="scrollToElement('about')"><i class="fa-solid fa-arrow-down"></i> Learn More</h2>
+            <h1>Individuelle Weblösungen aus Basel</h1>
+            <h2 onclick="scrollToElement('angebot')"><i class="fa-solid fa-arrow-down"></i> Learn More</h2>
         </div>
         <div id="spin-button">
             <i class="fa-solid fa-arrow-down spin-icon"></i>
@@ -79,21 +79,6 @@
     <div class="home-icons icons-white">
         <img src="../assets/Instagram_weiss.svg" />
         <img src="../assets/LinkedIn_weiss.svg" />
-    </div>
-    <div id="about" class="animated-element">
-        <div class="left">
-            <img src="../assets/avatar.png" alt="Avatar von Eric" />
-        </div>
-        <div class="right">
-            <h2>Über mich: Webentwickler mit einem Fokus auf persönliche Betreuung</h2>
-            <div class="text">
-                <p>Als Webentwickler ist es mir wichtig, eine persönliche Beziehung zu meinen Kunden aufzubauen und
-                    jedes Projekt individuell zu betreuen. Ich arbeite hart daran, sicherzustellen, dass jeder Kunde ein
-                    einzigartiges und auf ihre Bedürfnisse zugeschnittenes Produkt erhält. Mit jahrelanger Erfahrung in
-                    der Entwicklung von Webanwendungen und Websites biete ich ein umfassendes technisches Know-how und
-                    eine breite Palette von Fähigkeiten an, um die besten Ergebnisse für meine Kunden zu erzielen.</p>
-            </div>
-        </div>
     </div>
     <div id="angebot" class="animated-element">
         <div class="left">
@@ -132,15 +117,16 @@
         <div id="panels-container" style="width: 300%;">
             <article class="paneltino" id="panel1">
                 <div>
-                    <div id="lottie-animation-1">
-
-                    </div>
+                    
                     <div class="content-wrapper">
+                        <div id="lottie-animation-1">
+
+                        </div>
                     <p class="count">5.</p>
                     <div class="panel-content">
                         <p class="section-header">Erfolg!</p>
 
-                        <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
+                        <p class="ablauf-text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
                             gesamten,
                             wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
                             anderen
@@ -151,15 +137,16 @@
             </article>
             <article class="paneltino" id="panel2">
                 <div>
-                    <div id="lottie-animation-2">
-
-                    </div>
+                    
                     <div class="content-wrapper">
+                        <div id="lottie-animation-2">
+
+                        </div>
                     <p class="count">5.</p>
                     <div class="panel-content">
                         <p class="section-header">Erfolg!</p>
 
-                        <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
+                        <p class="ablauf-text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
                             gesamten,
                             wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
                             anderen
@@ -170,15 +157,16 @@
             </article>
             <article class="paneltino" id="panel3">
                 <div>
-                    <div id="lottie-animation-3">
-
-                    </div>
+                    
                     <div class="content-wrapper">
+                        <div id="lottie-animation-3">
+
+                        </div>
                     <p class="count">5.</p>
                     <div class="panel-content">
                         <p class="section-header">Erfolg!</p>
 
-                        <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
+                        <p class="ablauf-text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
                             gesamten,
                             wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
                             anderen
@@ -189,15 +177,16 @@
             </article>
             <article class="paneltino" id="panel4">
                 <div>
-                    <div id="lottie-animation-4">
-
-                    </div>
+                    
                     <div class="content-wrapper">
+                        <div id="lottie-animation-4">
+
+                        </div>
                     <p class="count">5.</p>
                     <div class="panel-content">
                         <p class="section-header">Erfolg!</p>
 
-                        <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
+                        <p class="ablauf-text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
                             gesamten,
                             wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
                             anderen
@@ -208,15 +197,16 @@
             </article>
             <article class="paneltino" id="panel5">
                 <div>
-                    <div id="lottie-animation-5">
-
-                    </div>
+                    
                     <div class="content-wrapper">
+                        <div id="lottie-animation-5">
+
+                        </div>
                     <p class="count">5.</p>
                     <div class="panel-content">
                         <p class="section-header">Erfolg!</p>
 
-                        <p class="text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
+                        <p class="ablauf-text">Dein Projekt wird fristgerecht erfolgreich abgeschlossen. Ich übergebe dir den
                             gesamten,
                             wohl dokumentierten Quellcode. Falls du das möchtest, helfe ich dir beim Hosting und allen
                             anderen
@@ -228,6 +218,21 @@
         </div>
     </section>
     <!--</div>-->
+    <div id="about" class="animated-element">
+        <div class="left">
+            <img src="../assets/avatar.webp" alt="Avatar von Eric" />
+        </div>
+        <div class="right">
+            <h2>Über mich: Webentwickler mit einem Fokus auf persönliche Betreuung</h2>
+            <div class="text">
+                <p>Als Webentwickler ist es mir wichtig, eine persönliche Beziehung zu meinen Kunden aufzubauen und
+                    jedes Projekt individuell zu betreuen. Ich arbeite hart daran, sicherzustellen, dass jeder Kunde ein
+                    einzigartiges und auf ihre Bedürfnisse zugeschnittenes Produkt erhält. Mit jahrelanger Erfahrung in
+                    der Entwicklung von Webanwendungen und Websites biete ich ein umfassendes technisches Know-how und
+                    eine breite Palette von Fähigkeiten an, um die besten Ergebnisse für meine Kunden zu erzielen.</p>
+            </div>
+        </div>
+    </div>
     <div id="contact" class="animated-element">
         <div class="left">
             <lottie-player

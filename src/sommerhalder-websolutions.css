@@ -650,14 +650,15 @@ footer p {
 }
 
 #lottie-animation-1, #lottie-animation-2, #lottie-animation-3, #lottie-animation-4, #lottie-animation-5 {
-  width: 50%;
   position: absolute;
-  top: -120px;
-  right: 0;
+  top: -300px;
+  right: -100px;
 }
 
 .content-wrapper {
     display: flex;
+    position: relative;
+    width: 700px;
 
 }
 
