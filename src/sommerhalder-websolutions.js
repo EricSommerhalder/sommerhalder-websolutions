@@ -300,8 +300,8 @@ tween = gsap.to(panels, {
 
 LottieScrollTrigger({
   target: "#lottie-animation-1",
-  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
-  speed: "fast",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/speech_animation.json",
+  speed: "veryfast",
   scrub: 1, // seconds it takes for the playhead to "catch up"
   pin: false,
   insideContainer: false,
@@ -310,7 +310,7 @@ LottieScrollTrigger({
 });
 LottieScrollTrigger({
   target: "#lottie-animation-2",
-  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/design_animation.json",
   speed: "fast",
   scrub: 1, // seconds it takes for the playhead to "catch up"
   pin: false,
@@ -320,7 +320,7 @@ LottieScrollTrigger({
 });
 LottieScrollTrigger({
   target: "#lottie-animation-3",
-  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/contract_animation.json",
   speed: "fast",
   scrub: 1, // seconds it takes for the playhead to "catch up"
   pin: false,
@@ -330,8 +330,8 @@ LottieScrollTrigger({
 });
 LottieScrollTrigger({
   target: "#lottie-animation-4",
-  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
-  speed: "fast",
+  path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/programming_animation.json",
+  speed: "veryfast",
   scrub: 1, // seconds it takes for the playhead to "catch up"
   pin: false,
   insideContainer: true,
@@ -341,7 +341,7 @@ LottieScrollTrigger({
 LottieScrollTrigger({
   target: "#lottie-animation-5",
   path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/beer_animation.json",
-  speed: "fast",
+  speed: "veryfast",
   scrub: 1, // seconds it takes for the playhead to "catch up"
   pin: false,
   insideContainer: true,
@@ -352,7 +352,7 @@ LottieScrollTrigger({
 function LottieScrollTrigger(vars) {
   let playhead = { frame: 0 },
     target = gsap.utils.toArray(vars.target)[0],
-    speeds = { slow: "+=2000", medium: "+=1000", fast: "+=500" },
+    speeds = { slow: "+=2000", medium: "+=1000", fast: "+=500", veryfast: "+=300" },
     st = { trigger: [vars.trigger] || target, pin: false, start: "top center", end: speeds[vars.speed] || "+=1000", scrub: 1 },
     ctx = gsap.context && gsap.context(),
     animation = lottie.loadAnimation({
@@ -394,7 +394,7 @@ LottieInteractivity.create({
       {
           visibility: [0, 1.0],
           type: 'seek',
-          frames: [0, 87],
+          frames: [0, 195],
       },
   ]
 });
