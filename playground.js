@@ -65,17 +65,27 @@ function ( err ) {
 // Render the scene
 function animate() {
 requestAnimationFrame( animate );
-if (object) {
+if(object){
+  console.log(gyroDiff);
+if (gyroDiff.x !== 0 || gyroDiff.y !== 0 || gyroDiff.z !== 0) {
+  object.rotation.x += gyroDiff.x;
+          object.rotation.y += gyroDiff.y;
+          object.rotation.z += gyroDiff.z;
+} else {
   object.rotation.x = mouse.y * 0.5;
   object.rotation.y = -mouse.x * 0.5;
 }
-
-renderer.render( scene, camera );
+gyroDiff = new THREE.Euler();
+}
+renderer.render(scene, camera);
 }
 
 let mouse = new THREE.Vector2();
-
+let gyro = new THREE.Euler();
+let lastGyro = new THREE.Euler();
+let gyroDiff = new THREE.Euler();
 window.addEventListener('mousemove', handleMouseMove, false);
+window.addEventListener('deviceorientation', handleDeviceOrientation, false);
 
 function handleMouseMove(event) {
     // here we're converting the mouse position from (-1 to 1) for both components
@@ -83,18 +93,27 @@ function handleMouseMove(event) {
     mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
 }
 
+function handleDeviceOrientation(event) {
+  // convert degrees to radians and store in gyro
+  gyro.x = THREE.Math.degToRad(event.beta);  // beta value
+    gyro.y = THREE.Math.degToRad(event.gamma); // gamma value
+    gyro.z = THREE.Math.degToRad(event.alpha); // alpha value
+  if (lastGyro.x !== 0 || lastGyro.y !== 0 || lastGyro.z !== 0){
+          gyroDiff.x = gyro.x - lastGyro.x;
+          gyroDiff.y = gyro.y - lastGyro.y;
+          gyroDiff.z = gyro.z - lastGyro.z;
+
+          
+
+          // store current gyro values for next frame
+          
+  }
+  lastGyro.copy(gyro);
+}
+
 animate();
 window.addEventListener('deviceorientation', handleDeviceOrientation, false);
 
-function handleDeviceOrientation(event) {
-    // event.alpha is the compass direction the device is facing in degrees
-    // event.beta is the device front/back tilt in degrees (-180, 180)
-    // event.gamma is the device left/right tilt in degrees (-90, 90)
-    if (object) {
-        object.rotation.y = THREE.Math.degToRad(event.beta);  // front/back tilt
-        object.rotation.x = THREE.Math.degToRad(event.gamma); // left/right tilt
-    }
-}
   /*function (loadedObject) {
     // Position, scale, or manipulate the loaded object as needed
     object = loadedObject;
