@@ -3,10 +3,34 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff);
 
 // Create the camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(0, 0, 5); // Adjust the camera position to move it away from the object
-camera.lookAt(scene.position); // Set the camera to look at the center of the scene
+/*
+let width = window.innerWidth; // or any other width
+let height = window.innerHeight; // or any other height
 
+// Parameters for the perspective camera are (fov, aspect, near, far)
+let camera = new THREE.PerspectiveCamera(
+    75,           // Field of View
+    width / height, // Aspect ratio
+    0.1,           // Near plane
+    1000          // Far plane
+);
+
+camera.position.set(0, 0, 5);
+*/
+let aspectRatio = window.innerWidth / window.innerHeight;
+let viewSize = 10; // This is the height of your viewing area. Adjust as needed.
+
+// Create the camera
+let camera = new THREE.OrthographicCamera(
+  (-aspectRatio * viewSize) / 2, // left
+  (aspectRatio * viewSize) / 2,  // right
+  viewSize / 2,                  // top
+  viewSize / -2,                 // bottom
+  -100,                          // near plane
+  100                            // far plane
+);
+
+camera.position.set(0, 0, 10); // Adjust this so your model is in view
 // Create the renderer
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -18,7 +42,60 @@ let object;
 const loader = new THREE.ObjectLoader();
 loader.load(
   'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/model-3.json',
-  function (loadedObject) {
+  function ( obj ) {
+    // Add the loaded object to the scene
+    /*obj.traverse( function ( child ) {
+			if ( child instanceof THREE.Mesh ) {
+				child.material = new THREE.MeshBasicMaterial({color: 0xff0000}); // Apply material here
+        console.log('Added');
+			}
+		} );*/
+    object = obj;
+    scene.add( obj );
+
+},
+function ( xhr ) {
+    console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+},
+function ( err ) {
+    console.error( 'An error happened' );
+}
+);
+
+// Render the scene
+function animate() {
+requestAnimationFrame( animate );
+if (object) {
+  object.rotation.x = mouse.y * 0.5;
+  object.rotation.y = -mouse.x * 0.5;
+}
+
+renderer.render( scene, camera );
+}
+
+let mouse = new THREE.Vector2();
+
+window.addEventListener('mousemove', handleMouseMove, false);
+
+function handleMouseMove(event) {
+    // here we're converting the mouse position from (-1 to 1) for both components
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+}
+
+animate();
+window.addEventListener('deviceorientation', handleDeviceOrientation, false);
+
+function handleDeviceOrientation(event) {
+    // event.alpha is the compass direction the device is facing in degrees
+    // event.beta is the device front/back tilt in degrees (-180, 180)
+    // event.gamma is the device left/right tilt in degrees (-90, 90)
+    if (object) {
+        object.rotation.y = THREE.Math.degToRad(event.beta);  // front/back tilt
+        object.rotation.x = THREE.Math.degToRad(event.gamma); // left/right tilt
+    }
+}
+  /*function (loadedObject) {
     // Position, scale, or manipulate the loaded object as needed
     object = loadedObject;
     object.position.set(-10, -10, 1);
@@ -78,7 +155,7 @@ function updateOrientation(event) {
   // Set the object's orientation based on the direction
   if (object) {
     object.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), dir);
-  }*/
+  }
 }
 
 // Add event listeners to update the object's orientation
@@ -93,3 +170,4 @@ function animate() {
   renderer.render(scene, camera);
 }
 animate();
+*/
