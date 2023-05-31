@@ -4,6 +4,7 @@
     --bg-color: #ffffff;
     --text-color: #333333;
     --screen-color: #333333;
+    --phone-header: #4E4E4E;
     --on-opacity: 1;
   }
   
@@ -11,6 +12,7 @@
     --bg-color: #1e1e1e;
     --text-color: #f5f5f5;
     --screen-color: #4E4E4E;
+    --phone-header: #333333;
     --on-opacity: 0;
   }
   
@@ -342,23 +344,47 @@ h3, h4, h5, h6, i {
 #projects h2 {
   font-size: 55px;
 }
+
+#projects .device-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 #tv {
-  width: 70%;
+  
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #tv .header {
-  width: calc(100% - 2px);
+  width: 1052px;
   height: 50px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid black;
   background-color: white;
 }
+#tv .header .circle-container {
+  margin-left: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#tv .header .circle-container .circle {
+    border: 1px solid black;
+    border-radius: 50%;
+    background: transparent;
+    height: 30%;
+    margin-left: 5px;
+    aspect-ratio: 1; 
+}
 
 #tv .screen {
-  width: 100%;
+  width: 1054px;
+  height: 550px;
   aspect-ratio: 1960/1080;
   background: var(--screen-color);
   display: flex;
@@ -367,8 +393,46 @@ h3, h4, h5, h6, i {
 }
 
 .screen video{
-  width: 90%;
+  width: 100%;
   
+}
+#phone {
+  border-radius: 28px;
+  padding: 10px;
+  border: 1px var(--text-color) solid;
+  height: fit-content;
+  background-color: white;
+}
+#phone .screen {
+  width: 258px;
+  height: 527px;
+  background-color: var(--screen-color);
+}
+
+#phone .header {
+  height: 26px;
+  width: 258px;
+  border-top-left-radius: 21px;
+  border-top-right-radius: 21px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#phone .header .circle {
+  border-radius: 50%;
+  background: white;
+  height: 40%;
+  aspect-ratio: 1; 
+}
+
+#phone .footer {
+  height: 32px;
+  width: 258px;
+  background-color: black;
+  border-bottom-left-radius: 21px;
+  border-bottom-right-radius: 21px;
 }
 
 /* Contact styling */
