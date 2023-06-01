@@ -45,6 +45,7 @@
 
 
 <body>
+    <div class="body-wrapper">
     <header class="navbar">
         <a class="clickable" onclick="scrollToElement('home')"><img src="../assets/SWS_Logo_Standard_rgb.png" /></a>
         <div class="links">
@@ -114,7 +115,7 @@
                 <div class="circle"></div>
             </div>
             </div>
-            <div class="clickable screen" id="screen">
+            <div onclick="redirect('https://www.michelle-heimberg.ch')" class="clickable screen" id="screen">
                 <video src="../assets/michelle_tv.mov" autoplay muted loop></video>
             </div>
         </div>
@@ -122,7 +123,7 @@
             <div class="header">
                 <div class="circle"></div>
             </div>
-            <div class="clickable screen">
+            <div onclick="redirect('https://www.michelle-heimberg.ch')" class="clickable screen">
                 <video src="../assets/michelle_mobile.mov" autoplay muted loop></video>
             </div>
             <div class="footer"></div>
@@ -321,6 +322,7 @@
             <a class="clickable" href="/agb">AGB</a>
         </div>
     </footer>
+</div>
 </body>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/TagCloud@2.3.2/dist/TagCloud.min.js"></script>

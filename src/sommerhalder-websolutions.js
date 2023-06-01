@@ -96,6 +96,10 @@ function scrollToElement(id) {
   });
 }
 
+function redirect(url) {
+  window.open(url, "_blank");
+}
+
 /**
  * Sets up event listener for the toggle button
  */
@@ -410,10 +414,15 @@ const speed = 0.2;
 const xSet = gsap.quickSetter(cursor, "x", "px");
 const ySet = gsap.quickSetter(cursor, "y", "px");
 
-window.addEventListener("mousemove", e => {    
+window.addEventListener("mousemove", e => {
+  cursor.style.display = "block";  
   mouse.x = e.x;
   mouse.y = e.y;  
 });
+
+window.addEventListener("touchstart", () => {
+  cursor.style.display = "none";
+})
 
 gsap.ticker.add(() => {
   
