@@ -464,3 +464,7 @@ let scale = gsap.timeline({ paused: true })
       rotation.reverse();
     });
   });
+
+  /**
+   * burger menu 
+   */

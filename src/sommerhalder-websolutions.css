@@ -77,15 +77,8 @@ h3, h4, h5, h6, i {
     color: var(--text-color);
 }
 
-@media only screen and (max-width: 1550px) {
-  .navbar img {
-    width: 300px;
-  }
-
-  .links a {
-    padding: 0 30px;
-    font-size: 24px;
-  }
+.burger-menu {
+  display: none;
 }
 /* Darkmode button */
   
@@ -805,4 +798,55 @@ footer p {
   pointer-events: none;
   z-index: 9;
   background-color: var(--bg-color);
+}
+
+@media only screen and (max-width: 1550px) {
+  .navbar img {
+    width: 300px;
+  }
+
+  .links a {
+    padding: 0 30px;
+    font-size: 24px;
+  }
+
+  
+}
+/* mobile menu */
+@media only screen and (max-width: 1085px) {
+  .navbar {
+    height: 83px;
+    justify-content: space-between;
+  }
+
+  .navbar .links {
+    display: none;
+  }
+  .navbar img {
+    width: 160px;
+}
+.toggle--label {
+  top: 65px;
+}
+
+#home {
+  height: calc(100vh - 83px);
+}
+
+.burger-menu {
+  display: block;
+  background-color: transparent;
+  border: none;
+  padding: 12px;
+  margin-right: 21px;
+}
+
+.icon-bar {
+  display: block;
+  width: 21px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: var(--text-color);
+  margin-bottom: 4px;
+}
 }
