@@ -21,7 +21,9 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
 }
-
+a {
+  cursor: none;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -32,6 +34,7 @@ body {
 html,
 body {
   margin: 0;
+  cursor: none;
 }
 body {
   overflow-x: hidden;
@@ -495,7 +498,6 @@ h3, h4, h5, h6, i {
   border-radius: 25px;
   padding: 5px 10px;
   margin-bottom: 100px;
-  cursor: pointer;
   text-decoration: none;
   color: var(--text-color);
   font-family: "Space Mono", sans-serif;
@@ -779,3 +781,19 @@ footer p {
 /*#ablauf div {
   display: inline-block;
 }*/
+
+/* cursor styling */
+.cursor {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 2px solid black;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.dark-mode .cursor {
+  border: 2px solid white;
+}

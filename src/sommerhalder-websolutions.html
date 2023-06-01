@@ -15,6 +15,7 @@
     <title>Sommerhalder Websolutions</title>
 </head>
 
+<div class="cursor"></div>
 <!--
 <div id="loadAnimation"></div>
 
@@ -40,21 +41,21 @@
         </mask>
     </svg>
 </div>
-
 -->
+
 
 <body>
     <header class="navbar">
-        <a onclick="scrollToElement('home')"><img src="../assets/SWS_Logo_Standard_rgb.png" /></a>
+        <a class="clickable" onclick="scrollToElement('home')"><img src="../assets/SWS_Logo_Standard_rgb.png" /></a>
         <div class="links">
-            <a onclick="scrollToElement('angebot')">Angebot</a>
-            <a onclick="scrollToElement('projects')">Projekte</a>
-            <a onclick="scrollToElement('ablauf')">Prozess</a>
-            <a onclick="scrollToElement('about')">Eric</a>
-            <a onclick="scrollToElement('contact')">Kontakt</a>
+            <a class="clickable" onclick="scrollToElement('angebot')">Angebot</a>
+            <a class="clickable" onclick="scrollToElement('projects')">Projekte</a>
+            <a class="clickable" onclick="scrollToElement('panels')">Prozess</a>
+            <a class="clickable" onclick="scrollToElement('about')">Eric</a>
+            <a class="clickable" onclick="scrollToElement('contact')">Kontakt</a>
         </div>
         <input type="checkbox" id="toggle" class="toggle--checkbox">
-        <label for="toggle" class="toggle--label">
+        <label for="toggle" class="toggle--label clickable">
             <span class="off">OFF</span>
             <span class="on">ON</span>
         </label>
@@ -64,10 +65,10 @@
         <div class="left"></div>
         <div class="right">
             <h1>Individuelle Weblösungen aus Basel</h1>
-            <h2 onclick="scrollToElement('angebot')"><i class="fa-solid fa-arrow-down"></i>Gemeinsam verwandeln wir
+            <h2 onclick="scrollToElement('angebot')">Gemeinsam verwandeln wir
                 deine Vision in Realität</h2>
         </div>
-        <div id="spin-button">
+        <div class="clickable" id="spin-button">
             <i class="fa-solid fa-arrow-down spin-icon"></i>
             <div class="spin-text spin-top">scroll</div>
             <div class="spin-text spin-right">down</div>
@@ -76,12 +77,12 @@
         </div>
     </div>
     <div class="home-icons icons-black">
-        <img src="../assets/Instagram_schwarz.svg" />
-        <img src="../assets/LinkedIn_schwarz.svg" />
+        <img class="clickable" src="../assets/Instagram_schwarz.svg" />
+        <img class="clickable" src="../assets/LinkedIn_schwarz.svg" />
     </div>
     <div class="home-icons icons-white">
-        <img src="../assets/Instagram_weiss.svg" />
-        <img src="../assets/LinkedIn_weiss.svg" />
+        <img class="clickable" src="../assets/Instagram_weiss.svg" />
+        <img class="clickable" src="../assets/LinkedIn_weiss.svg" />
     </div>
     <div id="angebot" class="animated-element">
         <div class="left">
@@ -113,7 +114,7 @@
                 <div class="circle"></div>
             </div>
             </div>
-            <div class="screen" id="screen">
+            <div class="clickable screen" id="screen">
                 <video src="../assets/michelle_tv.mov" autoplay muted loop></video>
             </div>
         </div>
@@ -121,7 +122,7 @@
             <div class="header">
                 <div class="circle"></div>
             </div>
-            <div class="screen">
+            <div class="clickable screen">
                 <video src="../assets/michelle_mobile.mov" autoplay muted loop></video>
             </div>
             <div class="footer"></div>
@@ -279,7 +280,7 @@
             <h2>Hast du eine Frage, eine Idee oder brauchst Unterstützung bei einem Projekt?</h2>
             <div class="wrapper">
                 <h3>Dann kontaktiere mich unverbindlich.</h3>
-                <a class="email" href="mailto:eric@sommerhalder-websolutions.ch">email <i
+                <a class="clickable email" href="mailto:eric@sommerhalder-websolutions.ch">email <i
                         class="fa-solid fa-arrow-right"></i></a>
                 <div class="address">
                     <p>Sommerhalder Websolutions</p>
@@ -292,7 +293,7 @@
                 </div>
             </div>
         </div>
-        <div id="spin-button-bottom">
+        <div class="clickable" id="spin-button-bottom">
             <i class="fa-solid fa-arrow-up spin-bottom-icon"></i>
             <div class="spin-text spin-bottom-top">scroll</div>
             <div class="spin-text spin-bottom-right">up</div>
@@ -301,23 +302,23 @@
         </div>
     </div>
     <footer>
-        <div class="icons icons-black">
+        <div class="clickable icons icons-black">
             <img src="../assets/Instagram_schwarz.svg" />
             <img src="../assets/LinkedIn_schwarz.svg" />
         </div>
-        <div class="icons icons-white">
+        <div class="clickable icons icons-white">
             <img src="../assets/Instagram_weiss.svg" />
             <img src="../assets/LinkedIn_weiss.svg" />
         </div>
         <p>Gemeinsam verwandeln wir deine Vision in Realität<br>eric@sommerhalder-websolutions.ch</p>
         <p>Im Nebengraben 19, 4107 Ettingen<br>+41 79 759 34 24</p>
         <div class="links">
-            <a href="/impressum">Impressum</a>
-            <a href="/datenschutz">Datenschutz</a>
+            <a class="clickable" href="/impressum">Impressum</a>
+            <a class="clickable" href="/datenschutz">Datenschutz</a>
         </div>
         <div class="links">
             <p>&copy; Sommerhalder Websolutions 2023</p>
-            <a href="/agb">AGB</a>
+            <a class="clickable" href="/agb">AGB</a>
         </div>
     </footer>
 </body>
