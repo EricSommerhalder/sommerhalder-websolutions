@@ -48,7 +48,7 @@ h3, h4, h5, h6, i {
 }
 /* Navbar Styling */
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--bg-color);
@@ -216,6 +216,7 @@ h3, h4, h5, h6, i {
 /* Home Styling */
 #home {
   height: calc(100vh - 133px);
+  margin-top: 133px;
   display: flex;
   position: relative;
   margin-bottom: 200px;
@@ -836,6 +837,7 @@ footer p {
 
 #home {
   height: calc(100vh - 83px);
+  margin-top: 83px;
 }
 
 .burger-menu {
@@ -858,14 +860,21 @@ footer p {
   .mobile-menu-active #mobile-menu {
     display: flex;
     flex-direction: column;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    position: sticky;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: fixed;
     height: calc(100vh - 83px);
-    top:0;
+    width: 100vw;
+    top:83px;
     left:0;
+    z-index: 1;
   }
-  .mobile-menu-active #mobile-menu span {
+  .mobile-menu-active #mobile-menu .menu-option{
+    border-top: 1px var(--bg-color) solid;
+    padding-left: 25px;
+  }
 
+  .mobile-menu-active #mobile-menu .last {
+    border-bottom: 1px var(--bg-color) solid;
   }
 }

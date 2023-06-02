@@ -47,7 +47,7 @@
 
 <body>
     <div class="body-wrapper">
-    <header class="navbar">
+    <header id="navbar" class="navbar">
         <a class="clickable" onclick="scrollToElement('home')"><img src="../assets/SWS_Logo_Standard_rgb.png" /></a>
         <div class="links">
             <a class="clickable" onclick="scrollToElement('angebot')">Angebot</a>
@@ -68,11 +68,11 @@
         </label>
     </header>
     <div id="mobile-menu">
-        <span>Angebot</span>
-        <span>Projekte</span>
-        <span>Prozess</span>
-        <span>Eric</span>
-        <span>Kontakt</span>
+        <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('angebot')">Angebot</span>
+        <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('projects')">Projekte</span>
+        <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('panels')">Prozess</span>
+        <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('about')">Eric</span>
+        <span class="clickable menu-option last" onclick="toggleMenu(); scrollToElement('contact')">Kontakt</span>
     </div>
     <div id="home">
         <div class="left"></div>

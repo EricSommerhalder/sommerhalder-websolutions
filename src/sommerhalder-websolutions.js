@@ -40,7 +40,6 @@ anim.onEnterFrame = function (e) {
       helper.style.display = "none";
     })
     document.body.appendChild(temp);
-    console.log("Reached");
     animationDiv.style.display = 'none';
     window.scrollTo({
       top: 0
@@ -73,7 +72,6 @@ squareDiv.style.left = `0`;
   }
 };
 anim.onComplete = function () {
-  console.log("Reached");
   animationDiv.style.display = 'none';
   window.scrollTo({
     top: 0
@@ -91,7 +89,7 @@ anim.onComplete = function () {
 
 function scrollToElement(id) {
   window.scrollTo({
-    top: document.getElementById(id).offsetTop - 133,
+    top: document.getElementById(id).offsetTop - document.getElementById("navbar").offsetHeight,
     behavior: 'smooth'
   });
 }
@@ -471,10 +469,13 @@ let scale = gsap.timeline({ paused: true })
   function toggleMenu(){
     document.documentElement.classList.toggle("mobile-menu-active");
   }
+function calcMenuFontSize(){
+
 
   var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-// Define the longest term in your mobile menu
+ 
+  var desiredSpanCount = 5;
+  // Define the longest term in your mobile menu
 var longestTerm = "Angebot"; // Replace this with your actual longest term
 
 // Set the maximum width you want the longest term to occupy (in pixels)
@@ -494,14 +495,26 @@ document.body.appendChild(tempSpan);
 
 // Measure the width of the span element
 var longestTermWidth = tempSpan.getBoundingClientRect().width;
-
+var spanHeight = tempSpan.getBoundingClientRect().height * 1.4; // factor because of space around text
 // Remove the temporary span element from the document body
 document.body.removeChild(tempSpan);
+const maxFontSizeWidth = Math.floor(maxWidth / longestTermWidth);
 
 
-// Calculate the font size based on the screen width and the length of the longest term
-var fontSize = Math.floor(maxWidth / longestTermWidth);
-console.log(fontSize);
+// Calculate the desired font size based on the maximum width and maximum font size
 // Apply the calculated font size to your mobile menu
+
+
+var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+var availableHeight = screenHeight - 88;
+var maxFontSizeHeight = Math.floor(availableHeight / (spanHeight * desiredSpanCount));
+var fontSize = Math.min(maxFontSizeHeight, maxFontSizeWidth);
+
 var mobileMenu = document.getElementById("mobile-menu"); // Replace "your-mobile-menu-id" with the ID of your mobile menu
 mobileMenu.style.fontSize = fontSize + "px";
+}
+
+calcMenuFontSize();
+
+window.addEventListener("resize", calcMenuFontSize);
