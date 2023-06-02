@@ -468,3 +468,40 @@ let scale = gsap.timeline({ paused: true })
   /**
    * burger menu 
    */
+  function toggleMenu(){
+    document.documentElement.classList.toggle("mobile-menu-active");
+  }
+
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+// Define the longest term in your mobile menu
+var longestTerm = "Angebot"; // Replace this with your actual longest term
+
+// Set the maximum width you want the longest term to occupy (in pixels)
+var maxWidth = 0.8 * screenWidth; // You can adjust the value (0.9) based on your requirements
+var tempSpan = document.createElement("span");
+tempSpan.style.visibility = "hidden";
+tempSpan.style.position = "absolute";
+tempSpan.style.whiteSpace = "nowrap";
+tempSpan.style.fontFamily = "Arial"; // Replace with your desired font family
+tempSpan.style.fontSize = "1px"; // Initial font size to measure the width
+
+// Set the text content of the span to the longest term
+tempSpan.textContent = longestTerm;
+
+// Append the span element to the document body
+document.body.appendChild(tempSpan);
+
+// Measure the width of the span element
+var longestTermWidth = tempSpan.getBoundingClientRect().width;
+
+// Remove the temporary span element from the document body
+document.body.removeChild(tempSpan);
+
+
+// Calculate the font size based on the screen width and the length of the longest term
+var fontSize = Math.floor(maxWidth / longestTermWidth);
+console.log(fontSize);
+// Apply the calculated font size to your mobile menu
+var mobileMenu = document.getElementById("mobile-menu"); // Replace "your-mobile-menu-id" with the ID of your mobile menu
+mobileMenu.style.fontSize = fontSize + "px";

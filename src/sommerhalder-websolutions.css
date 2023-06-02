@@ -80,6 +80,10 @@ h3, h4, h5, h6, i {
 .burger-menu {
   display: none;
 }
+
+#mobile-menu {
+  display: none;
+}
 /* Darkmode button */
   
   .toggle--checkbox {
@@ -106,6 +110,7 @@ h3, h4, h5, h6, i {
     top: 115px;
     right: 48px;
     transition: all 350ms ease-in;
+    cursor: none;
   }
   
   .toggle--label:before {
@@ -848,5 +853,19 @@ footer p {
   border-radius: 1px;
   background-color: var(--text-color);
   margin-bottom: 4px;
-}
+  }
+
+  .mobile-menu-active #mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    position: sticky;
+    height: calc(100vh - 83px);
+    top:0;
+    left:0;
+  }
+  .mobile-menu-active #mobile-menu span {
+
+  }
 }
