@@ -412,12 +412,15 @@ const speed = 0.2;
 const xSet = gsap.quickSetter(cursor, "x", "px");
 const ySet = gsap.quickSetter(cursor, "y", "px");
 
-window.addEventListener("mousemove", e => {
-  cursor.style.display = "block";  
-  mouse.x = e.x;
-  mouse.y = e.y;  
+window.addEventListener("pointermove", e => {
+  if (e.pointerType === "mouse") {
+    cursor.style.display = "block";  
+    mouse.x = e.x;
+    mouse.y = e.y;  
+  } else {
+    cursor.style.display = "none";
+  }
 });
-
 window.addEventListener("touchstart", () => {
   cursor.style.display = "none";
 })
@@ -468,6 +471,7 @@ let scale = gsap.timeline({ paused: true })
    */
   function toggleMenu(){
     document.documentElement.classList.toggle("mobile-menu-active");
+    document.documentElement.classList.toggle("dark-mode");
   }
 function calcMenuFontSize(){
 

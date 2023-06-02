@@ -64,6 +64,18 @@ h3, h4, h5, h6, i {
     width: 400px;
 }
 
+.white {
+  display: none;
+}
+
+.dark-mode .black {
+  display: none;
+}
+
+.dark-mode .white {
+  display: block;
+}
+
 .links {
     width: 100%;
     display: flex;
@@ -151,7 +163,7 @@ h3, h4, h5, h6, i {
   
   @keyframes switch {
     0% {
-      left: 5px;
+      left: 5px; 
     }
   
     100% {
@@ -483,6 +495,10 @@ h3, h4, h5, h6, i {
   width: 80%;
 }
 
+.dark-mode #lottie-lampe {
+  filter: invert(1);
+}
+
 #contact .right {
   width: 60%;
 }
@@ -747,6 +763,10 @@ footer p {
   right: -150px;
 }
 
+.dark-mode #lottie-animation-1, .dark-mode #lottie-animation-2, .dark-mode #lottie-animation-3, .dark-mode #lottie-animation-4, .dark-mode #lottie-animation-5 {
+  filter: invert(1);
+}
+
 #lottie-animation-2 {
   top: 380px;
   right: -50px;
@@ -857,11 +877,15 @@ footer p {
   margin-bottom: 4px;
   }
 
+  .open-state {
+    display: none;
+  }
+
   .mobile-menu-active #mobile-menu {
     display: flex;
     flex-direction: column;
-    background-color: var(--text-color);
-    color: var(--bg-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     position: fixed;
     height: calc(100vh - 83px);
     width: 100vw;
@@ -870,11 +894,32 @@ footer p {
     z-index: 1;
   }
   .mobile-menu-active #mobile-menu .menu-option{
-    border-top: 1px var(--bg-color) solid;
+    border-top: 1px var(--text-color) solid;
     padding-left: 25px;
   }
 
   .mobile-menu-active #mobile-menu .last {
-    border-bottom: 1px var(--bg-color) solid;
+    border-bottom: 1px var(--text-color) solid;
+  }
+
+  .mobile-menu-active .navbar {
+    /*background-color: var(--text-color);*/
+    border-bottom: none;
+  }
+
+  .mobile-menu-active .toggle--label {
+    display: none;
+  }
+
+  
+
+  .mobile-menu-active .closed-state {
+    display: none;
+  }
+
+  .mobile-menu-active .open-state {
+    display: block;
+    color: var(--text-color);
+    font-size: 32px;
   }
 }
