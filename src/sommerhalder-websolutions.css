@@ -317,44 +317,54 @@ h3, h4, h5, h6, i {
 
 /* Angebot styling */
 #angebot {
-  display: flex;
   margin-bottom: 200px;
 }
 
-#angebot .left, #angebot .right {
+.angebot-container {
+  display: flex;
+}
+
+.angebot-container .left, .angebot-container .right {
   width: 50%;
 }
 
-#angebot .left {
+.angebot-container .left {
   margin-left: 100px;
-}
-
-#angebot .right {
-  margin-right: 100px;
-}
-
-#angebot h2 {
-  font-size: 55px;
-  width: 70%;
-}
-
-#angebot .text {
-  font-size: 25px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-#angebot p {
-  width: 70%;
-}
-
-#angebot .tagcloud-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#angebot .tagcloud {
+.angebot-container .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#angebot h2 {
+  margin-left: 100px;
+  font-size: 55px;
+  width: 35%;
+}
+
+.angebot-container .text {
+  font-size: 25px;
+  display: flex;
+  justify-content: flex-end;
+  hyphens: auto;
+}
+
+.angebot-container p {
+  width: 70%;
+}
+
+.angebot-container .tagcloud-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.angebot-container .tagcloud {
   z-index: 1;
 }
 
@@ -922,4 +932,46 @@ footer p {
     color: var(--text-color);
     font-size: 32px;
   }
+
+  .home-icons, .dark-mode .home-icons {
+    display: none;
+  }
+
+  #angebot {
+    border-top: 1px var(--text-color) solid;
+  }
+
+  .angebot-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .angebot-container .left {
+    width: 90%;
+    margin: 0 30px;
+  }
+
+  .angebot-container .text {
+    font-size: 19px;
+  }
+
+  #angebot h2 {
+    font-size: 32px;
+    margin-left: 40px;
+  }
+
+  #projects {
+    border-top: 1px var(--text-color) solid;
+  }
 }
+
+@media only screen and (max-width: 1445px) {
+  .angebot-container p {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1134px) {
+  #angebot h2 {
+    width: unset;
+  }}

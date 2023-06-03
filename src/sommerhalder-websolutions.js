@@ -1,5 +1,4 @@
 //smoothscroll.polyfill();
-
 /**
  * Loads animation into its div and plays it.
  */
@@ -151,9 +150,22 @@ const texts = ['Elm',
 
 ];
 const options = { "radius": 300 };
+let tg = TagCloud(container, texts, options);
+setUpTagCloud();
+window.addEventListener("resize", setUpTagCloud);
 
-TagCloud(container, texts, options);
-
+function setUpTagCloud(){
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if (screenWidth <= 517 && options.radius == 300) {
+    options.radius = 150;
+    tg.destroy();
+    tg =TagCloud(container, texts, options);
+  } else if (screenWidth > 517 && options.radius == 150){
+    options.radius = 300;
+    tg.destroy();
+    tg = TagCloud(container, texts, options);
+  }
+}
 /**
  * Micro animations
  */
@@ -474,7 +486,7 @@ let scale = gsap.timeline({ paused: true })
     document.documentElement.classList.toggle("dark-mode");
   }
 function calcMenuFontSize(){
-
+  console.log("hi");
 
   var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
  
