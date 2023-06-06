@@ -87,6 +87,7 @@ h3, h4, h5, h6, i {
     font-size: 32px;
     text-decoration: none;
     color: var(--text-color);
+    white-space: nowrap;
 }
 
 .burger-menu {
@@ -295,13 +296,17 @@ h3, h4, h5, h6, i {
 }
 
 #about img {
-  width: 100%;
-  max-width: 550px;
+  width: 550px;
+  max-width: 80%;
 }
 
 #about h2 {
   font-size: 55px;
   width: 70%;
+}
+
+.mobile-title {
+  display: none;
 }
 
 #about .text {
@@ -721,11 +726,11 @@ footer p {
 }
 #panels #panels-container .paneltino {
   position: relative;
-  width: 60%;
+  width: 850px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 100px;
+  justify-content: center;
 }
 
 .panel-content {
@@ -826,7 +831,12 @@ footer p {
   z-index: 9;
   background-color: var(--bg-color);
 }
-
+@media only screen and (max-width: 1881px){
+  
+  #about p {
+    width: 70%;
+  }
+}
 @media only screen and (max-width: 1550px) {
   .navbar img {
     width: 300px;
@@ -837,7 +847,9 @@ footer p {
     font-size: 24px;
   }
 
-  
+  #about p {
+    width: 90%;
+  }
 }
 /* mobile menu */
 @media only screen and (max-width: 1085px) {
@@ -897,6 +909,7 @@ footer p {
   .mobile-menu-active #mobile-menu .menu-option{
     border-top: 1px var(--text-color) solid;
     padding-left: 25px;
+    white-space: nowrap;
   }
 
   .mobile-menu-active #mobile-menu .last {
@@ -978,6 +991,40 @@ footer p {
     font-size: 19px;
     width: 90%;
   }
+
+  #about {
+    border-top: 1px var(--text-color) solid;
+    flex-direction: column;
+
+  }
+
+  #about .left, #about .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #about h2 {
+    font-size: 32px;
+  }
+
+  .pc-title {
+    display: none;
+  }
+
+  .mobile-title {
+    display: block;
+    margin-left: 40px;
+  }
+
+  #about img {
+    width: 90%;
+    max-width: unset;
+  }
+
+  #about p {
+    font-size: 19px;
+  }
 }
 
 @media only screen and (max-width: 1445px) {
@@ -990,3 +1037,4 @@ footer p {
   #angebot h2 {
     width: unset;
   }}
+

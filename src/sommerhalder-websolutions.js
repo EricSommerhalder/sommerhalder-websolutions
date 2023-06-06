@@ -492,7 +492,7 @@ function calcMenuFontSize(){
  
   var desiredSpanCount = 5;
   // Define the longest term in your mobile menu
-var longestTerm = "Angebot"; // Replace this with your actual longest term
+var longestTerm = "Über mich"; // Replace this with your actual longest term
 
 // Set the maximum width you want the longest term to occupy (in pixels)
 var maxWidth = 0.8 * screenWidth; // You can adjust the value (0.9) based on your requirements
