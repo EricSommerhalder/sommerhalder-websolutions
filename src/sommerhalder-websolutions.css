@@ -388,13 +388,13 @@ h3, h4, h5, h6, i {
 }
 #tv {
   
-
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #tv .header {
-  width: 1052px;
+  width: calc(100% - 1px);
   height: 50px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -417,10 +417,8 @@ h3, h4, h5, h6, i {
     aspect-ratio: 1; 
 }
 
-#tv .screen {
-  width: 1054px;
-  height: 550px;
-  aspect-ratio: 1960/1080;
+.screen {
+  width: 100%;
   background: var(--screen-color);
   display: flex;
   align-items: center;
@@ -435,18 +433,12 @@ h3, h4, h5, h6, i {
   border-radius: 28px;
   padding: 10px;
   border: 1px var(--text-color) solid;
-  height: fit-content;
   background-color: white;
-}
-#phone .screen {
-  width: 258px;
-  height: 527px;
-  background-color: var(--screen-color);
+  width: 12%;
 }
 
 #phone .header {
   height: 26px;
-  width: 258px;
   border-top-left-radius: 21px;
   border-top-right-radius: 21px;
   background-color: black;
@@ -464,7 +456,6 @@ h3, h4, h5, h6, i {
 
 #phone .footer {
   height: 32px;
-  width: 258px;
   background-color: black;
   border-bottom-left-radius: 21px;
   border-bottom-right-radius: 21px;
@@ -962,6 +953,30 @@ footer p {
 
   #projects {
     border-top: 1px var(--text-color) solid;
+    align-items: unset;
+  }
+
+  #projects h2 {
+    font-size: 32px;
+    margin-left: 40px;
+  }
+
+  #projects .device-container #tv {
+    display: none;
+  }
+
+  #projects .device-container #phone {
+    width: 60%;
+  }
+
+  #projects .text-container {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  #projects .text-container p {
+    font-size: 19px;
+    width: 90%;
   }
 }
 
