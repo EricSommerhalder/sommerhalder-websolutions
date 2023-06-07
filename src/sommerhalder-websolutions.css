@@ -37,7 +37,7 @@ body {
   cursor: none;
 }
 .body-wrapper {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h2 {
