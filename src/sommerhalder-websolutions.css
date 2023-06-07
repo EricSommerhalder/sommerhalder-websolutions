@@ -1045,12 +1045,42 @@ footer p {
   #contact .wrapper {
     margin-left: 32px;
   }
+
   #contact .email {
     font-size: 19px;
     border: 1px var(--text-color) solid;
   }
+
   #contact p {
     font-size: 19px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+    text-align: center;
+  }
+
+  footer .icons img {
+    width: 25px;
+  }
+
+  footer .icons {
+    margin-bottom: 35px;
+  }
+
+  footer p, footer a {
+    line-height: 150%;
+  }
+  
+  footer .links {
+    flex-direction: column-reverse;
+  }
+
+  footer .links p {
+    font-weight: 600;
+    margin-top: 20px;
   }
 }
 
@@ -1063,5 +1093,11 @@ footer p {
 @media only screen and (max-width: 1134px) {
   #angebot h2 {
     width: unset;
-  }}
+  }
+}
 
+@media only screen and (max-width: 1290px) {
+  .footer-address{
+      display: none;
+  }
+}
