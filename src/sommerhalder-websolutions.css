@@ -550,7 +550,7 @@ h3, h4, h5, h6, i {
 
 #spin-button-bottom {
   position: absolute;
-  bottom: 0;
+  bottom: -200px;
   right: 50px;
   width: 120px;
   height: 120px;
@@ -1023,6 +1023,33 @@ footer p {
   }
 
   #about p {
+    font-size: 19px;
+  }
+
+  #contact {
+    border-top: 1px var(--text-color) solid;
+    flex-direction: column;
+  }
+
+  #contact .mobile-title {
+    font-size: 32px;
+    width: 80%;
+    text-align: right;
+  }
+
+  #contact .left, #contact .right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #contact .wrapper {
+    margin-left: 32px;
+  }
+  #contact .email {
+    font-size: 19px;
+    border: 1px var(--text-color) solid;
+  }
+  #contact p {
     font-size: 19px;
   }
 }
