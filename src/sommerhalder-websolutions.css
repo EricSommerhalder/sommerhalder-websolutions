@@ -838,7 +838,7 @@ footer p {
     width: 70%;
   }
 }
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1643px) {
   .navbar img {
     width: 300px;
   }
@@ -862,6 +862,12 @@ footer p {
     font-size: 60px;
   }
 }
+
+@media only screen and (max-width: 1160px){
+  .navbar img {
+    width: 200px;
+  }
+}
 /* mobile menu */
 @media only screen and (max-width: 1085px) {
   .navbar {
@@ -872,9 +878,7 @@ footer p {
   .navbar .links {
     display: none;
   }
-  .navbar img {
-    width: 160px;
-}
+  
 .toggle--label {
   top: 65px;
 }
@@ -921,8 +925,63 @@ footer p {
     border-top: 1px var(--text-color) solid;
     padding-left: 25px;
     white-space: nowrap;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: var(--bg-color);
   }
 
+@keyframes fanOut2 {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(100%);
+  }
+}
+
+@keyframes fanOut3 {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(200%);
+  }
+}
+
+@keyframes fanOut4 {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(300%);
+  }
+}
+
+@keyframes fanOut5 {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(400%);
+  }
+}
+
+.mobile-menu-active #mobile-menu .menu-option:nth-child(2) {
+  animation: fanOut2 0.5s ease 0.4s forwards;
+}
+
+.mobile-menu-active #mobile-menu .menu-option:nth-child(3) {
+  animation: fanOut3 0.5s ease 0.3s forwards;
+}
+
+.mobile-menu-active #mobile-menu .menu-option:nth-child(4) {
+  animation: fanOut4 0.5s ease 0.2s forwards;
+}
+
+.mobile-menu-active #mobile-menu .menu-option:nth-child(5) {
+  animation: fanOut5 0.5s ease 0.1s forwards;
+}
   .mobile-menu-active #mobile-menu .last {
     border-bottom: 1px var(--text-color) solid;
   }

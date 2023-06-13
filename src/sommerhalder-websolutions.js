@@ -481,6 +481,16 @@ let scale = gsap.timeline({ paused: true })
   /**
    * burger menu 
    */
+
+   const burgerDiv = document.getElementById('burger-menu');
+   let burgerAnim = lottie.loadAnimation({
+     container: animationDiv,
+     renderer: 'svg',
+     loop: false,
+     autoplay: false,
+     path: 'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/mobile-button-animation.json'
+   });
+   
   function toggleMenu(){
     document.documentElement.classList.toggle("mobile-menu-active");
     document.documentElement.classList.toggle("dark-mode");
@@ -534,3 +544,8 @@ mobileMenu.style.fontSize = fontSize + "px";
 calcMenuFontSize();
 
 window.addEventListener("resize", calcMenuFontSize);
+
+/**
+ * mobile button
+ */
+
