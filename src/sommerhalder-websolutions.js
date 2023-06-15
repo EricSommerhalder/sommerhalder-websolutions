@@ -484,7 +484,7 @@ let scale = gsap.timeline({ paused: true })
 
    const burgerDiv = document.getElementById('burger-menu');
    let burgerAnim = lottie.loadAnimation({
-     container: animationDiv,
+     container: burgerDiv,
      renderer: 'svg',
      loop: false,
      autoplay: false,
@@ -492,8 +492,15 @@ let scale = gsap.timeline({ paused: true })
    });
    
   function toggleMenu(){
+      
+
     document.documentElement.classList.toggle("mobile-menu-active");
     document.documentElement.classList.toggle("dark-mode");
+    if (document.documentElement.classList.contains("mobile-menu-active")) {
+      burgerAnim.playSegments([0, 27], true);
+    } else {
+      burgerAnim.playSegments([30, 60], true);
+    }
   }
 function calcMenuFontSize(){
   console.log("hi");

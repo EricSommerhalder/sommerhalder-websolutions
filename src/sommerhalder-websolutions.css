@@ -251,7 +251,6 @@ h3, h4, h5, h6, i {
   margin-top: 0;
   padding-left: 100px;
   padding-right: 20px;
-  font-family: "Space Mono", sans-serif;
 }
 
 .home-icons {
@@ -282,7 +281,8 @@ h3, h4, h5, h6, i {
 
 #about {
   display: flex;
-  margin-bottom: 200px  ;
+  margin-bottom: 200px;
+  align-items: flex-start;
 }
 
 #about .left {
@@ -304,6 +304,7 @@ h3, h4, h5, h6, i {
 #about h2 {
   font-size: 55px;
   width: 70%;
+  margin-top: 0;
 }
 
 .mobile-title {
@@ -337,6 +338,7 @@ h3, h4, h5, h6, i {
 .angebot-container .left {
   margin-left: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -350,7 +352,7 @@ h3, h4, h5, h6, i {
 #angebot h2 {
   margin-left: 100px;
   font-size: 55px;
-  width: 35%;
+  width: 70%;
 }
 
 .angebot-container .text {
@@ -404,7 +406,7 @@ h3, h4, h5, h6, i {
   height: 50px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid var(--text-color);
   background-color: white;
 }
 #tv .header .circle-container {
@@ -429,6 +431,7 @@ h3, h4, h5, h6, i {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--text-color);
 }
 
 .screen video{
@@ -444,6 +447,7 @@ h3, h4, h5, h6, i {
 }
 
 #phone .header {
+  width: calc(100% + 2px);
   height: 26px;
   border-top-left-radius: 21px;
   border-top-right-radius: 21px;
@@ -483,7 +487,6 @@ h3, h4, h5, h6, i {
 #contact {
   display: flex;
   width: 100%;
-  margin-top: 500px;
   margin-bottom: 200px;
   position: relative;
 }
@@ -551,7 +554,7 @@ h3, h4, h5, h6, i {
 
 #spin-button-bottom {
   position: absolute;
-  bottom: -200px;
+  bottom: -150px;
   right: 50px;
   width: 120px;
   height: 120px;
@@ -743,6 +746,7 @@ footer p {
   margin-top: 108px;
 
 }
+
 .count {
   font-weight: 600;
   font-size: 155px;
@@ -808,8 +812,55 @@ footer p {
 .down {
   align-items: flex-end;
   display: flex;
+  
 }
 
+/* values styling */
+#values {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+#values h2 {
+  font-size: 55px;
+}
+
+.values-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.values-wrapper img {
+  height: 15%;
+}
+
+.dark-mode .values-wrapper img {
+  filter: invert(1);
+}
+
+.values-wrapper h3 {
+  font-size: 39px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+}
+
+.values-wrapper p {
+  font-size: 25px;
+}
+
+.values-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  margin: 0 2.5% 0 2.5%;
+}
 
 /*#ablauf::-webkit-scrollbar {
   display: none;
@@ -849,6 +900,11 @@ footer p {
   }
 
   #about p {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1501px) {
+  #contact h2 {
     width: 90%;
   }
 }
@@ -896,14 +952,9 @@ footer p {
   margin-right: 21px;
 }
 
-.icon-bar {
-  display: block;
-  width: 21px;
-  height: 3px;
-  border-radius: 1px;
-  background-color: var(--text-color);
-  margin-bottom: 4px;
-  }
+.dark-mode .burger-menu {
+  filter: invert(1);
+}
 
   .open-state {
     display: none;
@@ -919,7 +970,7 @@ footer p {
     width: 100vw;
     top:83px;
     left:0;
-    z-index: 1;
+    z-index: 3;
   }
   .mobile-menu-active #mobile-menu .menu-option{
     border-top: 1px var(--text-color) solid;
@@ -1021,6 +1072,7 @@ footer p {
   }
 
   .angebot-container .left {
+
     width: 90%;
     margin: 0 30px;
   }
@@ -1034,45 +1086,13 @@ footer p {
     margin-left: 40px;
   }
 
-  #projects {
-    border-top: 1px var(--text-color) solid;
-    align-items: unset;
-  }
-
-  #projects h2 {
-    font-size: 32px;
-    margin-left: 40px;
-  }
-
-  #projects .device-container #tv {
-    display: none;
-  }
-
-  #projects .device-container #phone {
-    width: 60%;
-  }
-
-  #projects .text-container {
-    margin-right: 0;
-    margin-top: 20px;
-  }
-
-  #projects .text-container p {
-    font-size: 19px;
-    width: 90%;
-  }
+  
 
   #about {
     border-top: 1px var(--text-color) solid;
-    flex-direction: column;
-
+    padding-top: 1.5rem;
   }
 
-  #about .left, #about .right {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
 
   #about h2 {
     font-size: 32px;
@@ -1087,9 +1107,12 @@ footer p {
     margin-left: 40px;
   }
 
-  #about img {
-    width: 90%;
-    max-width: unset;
+  #about .pc-title {
+    display: block;
+  }
+
+  #about .mobile-title {
+    display: none;
   }
 
   #about p {
@@ -1104,7 +1127,7 @@ footer p {
   #contact .mobile-title {
     font-size: 32px;
     width: 80%;
-    text-align: right;
+    text-align: left;
   }
 
   #contact .left, #contact .right {
@@ -1123,6 +1146,10 @@ footer p {
 
   #contact p {
     font-size: 19px;
+  }
+
+  #contact h3 {
+    font-size: 24px;
   }
 
   footer {
@@ -1149,7 +1176,6 @@ footer p {
   }
 
   footer .links p {
-    font-weight: 600;
     margin-top: 20px;
   }
 
@@ -1175,9 +1201,41 @@ footer p {
 
   #home h2 {
     width: 80%;
-    font-size: 19px;
+    font-size: 24px;
     padding: 0;
   }
+
+  #values h2 {
+    font-size: 32px;
+  }
+
+  .values-wrapper h3 {
+    font-size: 24px;
+  }
+
+  .values-wrapper p {
+    font-size: 19px;
+  }
+
+  #projects {
+    border-top: 1px var(--text-color) solid;
+  }
+
+  #projects h2 {
+    font-size: 32px;
+    margin-left: 40px;
+  }
+
+  #projects .text-container {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  #projects .text-container p {
+    font-size: 19px;
+    width: 90%;
+  }
+
 }
 
 @media only screen and (max-width: 1445px) {
@@ -1186,9 +1244,64 @@ footer p {
   }
 }
 
-@media only screen and (max-width: 1134px) {
-  #angebot h2 {
-    width: unset;
-  }
-}
 
+@media only screen and (max-width: 768px) {
+  .values-wrapper {
+    flex-direction: column;
+  }
+
+  .values-panel {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  .values-panel img {
+    width: 20%;
+  }
+
+  .values-panel p {
+    width: 90%;
+  }
+
+  #projects {
+    align-items: unset;
+  }
+
+ 
+
+  #projects .device-container #tv {
+    display: none;
+  }
+
+  #projects .device-container #phone {
+    width: 60%;
+  }
+
+  #about {
+    flex-direction: column;
+  }
+
+  #about .left, #about .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+  #about img {
+    width: 90%;
+    max-width: unset;
+  }
+
+  #about .pc-title {
+    display: none;
+  }
+
+  #about .mobile-title {
+    display: block;
+  }
+
+ 
+}

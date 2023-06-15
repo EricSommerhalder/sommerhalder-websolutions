@@ -1,21 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;600&family=Space+Mono&display=swap');
 body {
-    background-color: #0A1045;
-   overflow-x: hidden;
-   }
-   
-   body,
-   html {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.body-wrapper {
+    overflow: hidden;
+}
+
+.filler {
+    height: 100vh;
+}
+
+.filler p {
+    font-size: 50px;
+}
+.panels-container {
+    display: flex;
+    width: 400%; /* 5 panels * 100% */
+    height: 100vh;
+    overflow: visible;
+  }
+  
+  .panel {
+    flex: 0 0 80vw; /* Each panel will be 80% of the viewport width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    width: 100%;
+  }
+  
+  .content-wrapper {
+    max-width: 650px; /* Max width of content */
+    display: flex;
+    position: relative;
+  }
+
+  .count {
+    font-weight: 600;
+    font-size: 155px;
     margin: 0;
-    padding: 0;
-   }
-   
-   #animationWindow {
-    width: 30%;
-    height: 30%;
-   }
-   
-   path {
-    stroke: #17D4D6;
-   }
+  }
+  
+  .section-header {
+    font-weight: 600;
+    font-size: 55px;
+    margin: 0;
+  }
+  
+  .ablauf-text {
+    font-weight: 300;
+    font-size: 25px;
+  }
+  .down {
+    height: 650px;
+    align-items: flex-end;
+    display: flex; 
+  }
+  .panel-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
+    align-items: flex-start;
+    margin-top: 108px;
+}
+
+#lottie-animation-1, #lottie-animation-2, #lottie-animation-3, #lottie-animation-4, #lottie-animation-5 {
+    position: absolute;
+  
+  }
+  
+  #lottie-animation-1 {
+    top: -260px;
+    right: -150px;
+  }
+  
+  
+  #lottie-animation-2 {
+    top: 380px;
+    right: -50px;
+  }
+  
+  #lottie-animation-3 {
+    top: -230px;
+    right: -280px;
+  }
+  
+  #lottie-animation-4 {
+    top: 370px;
+    right: -170px;
+  }
+  
+  #lottie-animation-5 {
+    top: -340px;
+    right: -200px;
+  }

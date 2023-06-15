@@ -2,176 +2,167 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="fourthplayground.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   </head>
   <body>
-    <div class="ball"></div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <div class="clickable">Click me</div>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <div class="clickable">Click me</div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br>
+    <div class="body-wrapper">
+    <div id="page" class="site">
+
+      
+    
+      <main id="content" class="site-content" role="main">
+    
+        <section id="intro" class="full-screen">
+          <h1>A cool title</h1>
+        </section>
+    
+        <section id="panels">
+    
+          <div id="panels-container" style="width: 500%;">
+            <article id="panel-1" class="panel full-screen">
+              <div class="container">
+                <div class="row">
+                  <div class="">
+    
+                    <h2>Panel 1</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-2" class="panel full-screen orange">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 2</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-1" class="anchor">Prev</a></div>
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-3" class="anchor">Next</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-3" class="panel full-screen purple">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 3</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-2" class="anchor">Prev</a></div>
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-4" class="anchor">Next</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-4" class="panel full-screen green">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 4</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-3" class="anchor">Prev</a></div>
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-5" class="anchor">Next</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-5" class="panel full-screen gray">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 5</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+                    <div class="cards-wrapper">
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+    
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                      <div class="card">test</div>
+                    </div>
+    
+                    <div class="panels-navigation text-right">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-4" class="anchor">Prev</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+    
+        <section id="map" class="full-screen"></section>
+    
+      </main>
+    
+    </div>
+  </div>
   </body>
   <script src="fourthplayground.js"></script>
 </html>
