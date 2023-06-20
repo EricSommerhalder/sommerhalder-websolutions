@@ -811,8 +811,7 @@ footer p {
 
 .down {
   align-items: flex-end;
-  display: flex;
-  
+  display: flex; 
 }
 
 /* values styling */

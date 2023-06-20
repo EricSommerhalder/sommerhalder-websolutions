@@ -1,68 +1,113 @@
-/* Most of these styles could be removed but are for the demo to look better */
-
-html,
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;600&family=Space+Mono&display=swap');
 body {
-  margin: 0;
-}
-body {
-  overflow-x: hidden;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
-#ablauf {
-  margin-bottom: 200px;
-  /*margin-left: 100px;*/
+.body-wrapper {
+    overflow: hidden;
 }
 
-#panels-container {
-  height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding: 0;
-  overflow: hidden;
+.filler {
+    height: 100vh;
 }
-#panels-container .panel {
-  position: relative;
-  width: 30%;
-  height: 50vh;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
+.filler p {
+    font-size: 50px;
+}
+.panels-container {
+    display: flex;
+    width: 500%; /* 5 panels * 100% */
+    height: 100vh;
+    overflow: visible;
+  }
+  
+  .panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .content-wrapper {
+    width: 100%; /* Max width of content */
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .count {
+    font-weight: 600;
+    font-size: 155px;
+    margin: 0;
+    margin-left: 17%;
+    margin-top: 30vh;
+  }
+  
+  .section-header {
+    font-weight: 600;
+    font-size: 55px;
+    margin: 0;
+    margin-bottom: 2vh;
+  }
+  
+  .ablauf-text {
+    font-weight: 300;
+    font-size: 25px;
+  }
+  
+  .panel-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: calc(30vh + 100px);
+    width: 30%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px black solid;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  /*margin-right: 10%;*/
+  height: 133px;
+  z-index: 2;
+  font-family: "Space Mono", sans-serif;
 }
 
-.panel-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-left: 30px;
-  margin-top: 232px;
-}
-.count {
-  font-weight: 600;
-  font-size: 155px;
-  margin: 0;
-}
-
-.section-header {
-  font-weight: 600;
-  font-size: 55px;
-  margin: 0;
-}
-
-.ablauf-text {
-  font-weight: 300;
-  font-size: 25px;
-}
-
-#lottie-animation-1 {
-  height: 60%;
-  position: absolute;
-  top:0;
-  right: -150px;
-}
+#lottie-animation-1, #lottie-animation-2, #lottie-animation-3, #lottie-animation-4, #lottie-animation-5 {
+    position: absolute;
+  
+  }
+  #lottie-animation-1 {
+    top: 12vh;
+    right: 8%;
+    width: 30%;
+  }
+  /*
+  #lottie-animation-1 {
+    top: -260px;
+    right: -150px;
+  }
+  
+  
+  #lottie-animation-2 {
+    top: 380px;
+    right: -50px;
+  }
+  
+  #lottie-animation-3 {
+    top: -230px;
+    right: -280px;
+  }
+  
+  #lottie-animation-4 {
+    top: 370px;
+    right: -170px;
+  }
+  
+  #lottie-animation-5 {
+    top: -340px;
+    right: -200px;
+  }*/

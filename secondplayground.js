@@ -32,7 +32,7 @@ LottieScrollTrigger({
     scrub: 1, // seconds it takes for the playhead to "catch up"
     pin: false,
     insideContainer: true,
-    trigger: "#panel2"
+    trigger: "#lottie-animation-2"
     // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
   });
   
@@ -43,7 +43,7 @@ LottieScrollTrigger({
     scrub: 1, // seconds it takes for the playhead to "catch up"
     pin: false,
     insideContainer: true,
-    trigger: "#panel3"
+    trigger: "#lottie-animation-3"
     // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
   });
   LottieScrollTrigger({
@@ -53,7 +53,7 @@ LottieScrollTrigger({
     scrub: 1, // seconds it takes for the playhead to "catch up"
     pin: false,
     insideContainer: true,
-    trigger: "#panel4"
+    trigger: "#lottie-animation-4"
     // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
   });
   LottieScrollTrigger({
@@ -91,7 +91,6 @@ LottieScrollTrigger({
         animation.frameTween = gsap.to(playhead, {
           frame: animation.totalFrames - 1,
           ease: "none",
-          invalidateOnRefresh: true,
           onUpdate: () => animation.goToAndStop(playhead.frame, true),
           scrollTrigger: st,
         });
