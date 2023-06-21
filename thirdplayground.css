@@ -17,17 +17,20 @@ body {
 
 .panels-container {
     display: flex;
-    width: 500%; /* 5 panels * 100% */
+    width: calc(500vw); /* 5 panels * 100% */
     height: 100vh;
     overflow: visible;
   }
   
   .panel {
-    width: 100%;
+    /*width: calc(100vw -20px);*/
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   
  
@@ -118,6 +121,11 @@ body {
   @media only screen and (max-width: 1290px) {
     .panel-content {
       width: 50%;
+    }
+
+    #lottie-animation-2 {
+      top: calc(30vh + 133px);
+      left: 2%;
     }
   }
 

@@ -28,11 +28,11 @@ LottieScrollTrigger({
   LottieScrollTrigger({
     target: "#lottie-animation-2",
     path: "https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/design_animation.json",
-    speed: "fast",
+    speed: "veryfast",
     scrub: 1, // seconds it takes for the playhead to "catch up"
     pin: false,
     insideContainer: true,
-    trigger: "#lottie-animation-2"
+    trigger: "#panel2"
     // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
   });
   
