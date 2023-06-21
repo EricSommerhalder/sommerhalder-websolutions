@@ -32,7 +32,8 @@ LottieScrollTrigger({
     scrub: 1, // seconds it takes for the playhead to "catch up"
     pin: false,
     insideContainer: true,
-    trigger: "#panel2"
+    trigger: "#panel2",
+    mobileStart: "top bottom"
     // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
   });
   
@@ -43,7 +44,10 @@ LottieScrollTrigger({
     scrub: 1, // seconds it takes for the playhead to "catch up"
     pin: false,
     insideContainer: true,
-    trigger: "#lottie-animation-3"
+    trigger: "#lottie-animation-3",
+    start: "bottom bottom",
+    mobileStart: "top bottom",
+    mobileSpeed: "veryfast"
     // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
   });
   LottieScrollTrigger({
@@ -53,7 +57,9 @@ LottieScrollTrigger({
     scrub: 1, // seconds it takes for the playhead to "catch up"
     pin: false,
     insideContainer: true,
-    trigger: "#lottie-animation-4"
+    trigger: "#lottie-animation-4",
+    start: "bottom bottom",
+    mobileStart: "top bottom"
     // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
   });
   LottieScrollTrigger({
@@ -63,7 +69,8 @@ LottieScrollTrigger({
     scrub: 1, // seconds it takes for the playhead to "catch up"
     pin: false,
     insideContainer: true,
-    trigger: "#panel5"
+    trigger: "#panel5",
+    mobileStart: "top bottom"
     // you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
   });
   function LottieScrollTrigger(vars) {
@@ -88,6 +95,24 @@ LottieScrollTrigger({
     }
     animation.addEventListener("DOMLoaded", function () {
       let createTween = function () {
+        if (vars.mobileStart) {
+          // Use ScrollTrigger matchMedia to define different start values
+          ScrollTrigger.matchMedia({
+            // For mobile screens (below 768px)
+            "(max-width: 768px)": function () {
+              st.start = vars.mobileStart;
+            }
+          });
+        }
+        if (vars.mobileSpeed) {
+          // Use ScrollTrigger matchMedia to define different start values
+          ScrollTrigger.matchMedia({
+            // For mobile screens (below 768px)
+            "(max-width: 768px)": function () {
+              st.end = speeds[vars.mobileSpeed];
+            }
+          });
+        }
         animation.frameTween = gsap.to(playhead, {
           frame: animation.totalFrames - 1,
           ease: "none",
