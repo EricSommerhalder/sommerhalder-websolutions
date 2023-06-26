@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="sommerhalder-websolutions.css" />
     <script src="https://kit.fontawesome.com/ca1d8359ae.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.11.0/lottie.min.js"></script>
@@ -55,7 +56,7 @@
                     src="../assets/SWS_Logo_Inverted_rgb.png" /></a>
             <div class="links">
                 <a class="clickable" onclick="scrollToElement('angebot')">Angebot</a>
-                <a class="clickable" onclick="scrollToElement('panels')">Prozess</a>
+                <a class="clickable" onclick="scrollToElement('ablauf')">Prozess</a>
                 <a class="clickable" onclick="scrollToElement('projects')">Projekte</a>
                 <a class="clickable" onclick="scrollToElement('about')">Über mich</a>
                 <a class="clickable" onclick="scrollToElement('contact')">Kontakt</a>
@@ -80,7 +81,7 @@
         </header>
         <div id="mobile-menu">
             <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('angebot')">Angebot</span>
-            <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('panels')">Prozess</span>
+            <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('ablauf')">Prozess</span>
             <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('projects')">Projekte</span>
             <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('about')">Über mich</span>
             <span class="clickable menu-option last" onclick="toggleMenu(); scrollToElement('contact')">Kontakt</span>
@@ -88,11 +89,11 @@
         <div id="home">
             <div class="left"></div>
             <div class="right">
-                <h1>Individuelle Weblösungen aus Basel</h1>
-                <h2>Gemeinsam verwandeln wir
+                <h1>Individuelle<br> Weblösungen<br> aus Basel</h1>
+                <h2>Gemeinsam verwandeln<br> wir
                     deine Vision in die Realität</h2>
             </div>
-            <div class="clickable" id="spin-button">
+            <div class="clickable" id="spin-button" onclick="scrollToElement('angebot')">
                 <i class="fa-solid fa-arrow-down spin-icon"></i>
                 <div class="spin-text spin-top">scroll</div>
                 <div class="spin-text spin-right">down</div>
@@ -109,12 +110,12 @@
             <img class="clickable" src="../assets/LinkedIn_weiss.svg" />
         </div>
         <div id="angebot" class="animated-element">
-            <h2 class="mobile-title">Die Umsetzung deiner Vision</h2>
+            <h2 class="mobile-title">Die Umsetzung<br> deiner Vision</h2>
             <div class="angebot-container">
 
 
                 <div class="left">
-                    <h2 class="pc-title">Die Umsetzung deiner Vision</h2>
+                    <h2 class="pc-title">Die Umsetzung<br> deiner Vision</h2>
                     <div class="text">
                         <p>Du möchtest deine Prozesse mit einer massgeschneiderten App optimieren? Du hast den Wunsch
                             deinen
@@ -134,6 +135,7 @@
 
         <!--
     <div id="ablauf" class="animated-element">-->
+        <!--
         <section id="panels">
             <h2>Prozess</h2>
             <div id="panels-container" style="width: 4250px;">
@@ -249,6 +251,118 @@
                 </article>
             </div>
         </section>
+    -->
+
+    <div id="ablauf">
+    <div class="panels-container">
+        <div class="panel" id="panel1">
+          <div class="content-wrapper">
+            
+            <p class="count desktop">1.</p>
+            <div class="panel-content">
+              <p class="section-header desktop">Erstes Gespräch</p>
+              <div class="mobile">
+                <p class="count">1.</p>
+                <p class="section-header">Erstes Gespräch</p>
+              </div>
+              <div id="lottie-animation-1">
+  
+              </div>
+              <p class="ablauf-text">Wir starten mit einem unverbindlichen und kostenlosen
+                Austausch.
+                Du erzählst mir von deinem Projekt und ich bringe Vorschläge ein, wie wir deine
+                Ideen verwirklichen können. Bei uns gibt es kein 'Geht nicht' - nur
+                massgeschneiderte Lösungen!</p>
+            </div>
+          
+          </div>
+        </div>
+        <div class="panel" id="panel2">
+          <div class="content-wrapper">
+            
+            <p class="count desktop">2.</p>
+            <div class="panel-content">
+              <p class="section-header desktop">Designkonzept</p>
+              <div class="mobile">
+                <p class="count">2.</p>
+                <p class="section-header">Konzept</p>
+              </div>
+              <div id="lottie-animation-2">
+  
+              </div>
+              <p class="ablauf-text">Bevor die eigentliche Umsetzung beginnt, definieren wir
+                gemeinsam, wie deine App oder Website aussehen soll. Obwohl ich selbst kein
+                Designer
+                bin, kann ich auf Wunsch die richtige Fachperson aus meinem Netzwerk für diesen
+                Bereich hinzuziehen.
+                Zusammen gestalten wir ein Design, das deine Vision widerspiegelt.</p>
+            </div>
+          </div>
+        </div><div class="panel" id="panel3">
+          <div class="content-wrapper">
+            
+            <p class="count desktop">3.</p>
+            <div class="panel-content">
+              <p class="section-header desktop">Vereinbarung</p>
+              <div class="mobile">
+                <p class="count">3.</p>
+                <p class="section-header">Vereinbarung</p>
+              </div>
+              <div id="lottie-animation-3">
+  
+              </div>
+              <p class="ablauf-text">Gemeinsam definieren wir alle Funktionen deiner App oder
+                Website
+                und halten diese im Detail fest. Daraus entsteht ein klares Bild des Projekts
+                und
+                ein strukturierter Zeitplan, der uns hilft, den Überblick zu behalten und den
+                Projektverlauf nachzuverfolgen.</p>
+            </div>
+          </div>
+        </div><div class="panel" id="panel4">
+          <div class="content-wrapper">
+            
+            <p class="count desktop">4.</p>
+            <div class="panel-content">
+              <p class="section-header desktop">Projektumsetzung</p>
+              <div class="mobile">
+                <p class="count">4.</p>
+                <p class="section-header">Umsetzung</p>
+              </div>
+              <div id="lottie-animation-4">
+  
+              </div>
+              <p class="ablauf-text">Jetzt ist es an der Zeit, deine Ideen von der Skizze auf den
+                Bildschirm zu bringen. Du erhältst regelmässige Updates zu den Fortschritten
+                und
+                wir können uns jederzeit digital oder persönlich treffen, um aufkommende
+                Fragen zu besprechen.</p>
+            </div>
+          </div>
+        </div><div class="panel" id="panel5">
+          <div class="content-wrapper">
+            
+            <p class="count desktop">5.</p>
+            <div class="panel-content">
+              <p class="section-header desktop">Projektabschluss</p>
+              <div class="mobile">
+                <p class="count">5.</p>
+                <p class="section-header">Abschluss</p>
+              </div>
+              <div id="lottie-animation-5">
+  
+              </div>
+              <p class="ablauf-text">Dein Projekt wird zum vereinbarten Zeitpunkt erfolgreich
+                abgeschlossen. Ich übergebe dir den vollständigen und sorgfältig dokumentierten
+                Quellcode. Solltest du Unterstützung beim Hosting oder bei anderen Fragen
+                benötigen,
+                stehe ich dir selbstverständlich zur Verfügung. Nun hast du die Freiheit,
+                dein Produkt unabhängig zu nutzen.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
         <div id="projects" class="animated-element">
             <h2>
                 Letztes Projekt
@@ -263,7 +377,7 @@
                         </div>
                     </div>
                     <div onclick="redirect('https://www.michelle-heimberg.ch')" class="clickable screen" id="screen">
-                        <video src="../assets/michelle_tv.mov" autoplay muted loop></video>
+                        <video src="../assets/michelle_tv.webm" autoplay muted loop></video>
                     </div>
                 </div>
                 <div id="phone">
@@ -271,7 +385,7 @@
                         <div class="circle"></div>
                     </div>
                     <div onclick="redirect('https://www.michelle-heimberg.ch')" class="clickable screen">
-                        <video src="../assets/michelle_mobile.mov" autoplay muted loop></video>
+                        <video src="../assets/michelle_phone.webm" autoplay muted loop></video>
                     </div>
                     <div class="footer"></div>
                 </div>
@@ -341,7 +455,7 @@
             <div class="right">
                 <h2 class="pc-title">Hast du eine Frage, eine Idee oder brauchst Unterstützung bei einem Projekt?</h2>
                 <div class="wrapper">
-                    <h3>Dann kontaktiere mich unverbindlich.</h3>
+                    <h3>Dann kontaktiere mich <br>unverbindlich.</h3>
                     <a class="clickable email" href="mailto:eric@sommerhalder-websolutions.ch">email <i
                             class="fa-solid fa-arrow-right"></i></a>
                     <div class="address">
@@ -355,7 +469,7 @@
                     </div>
                 </div>
             </div>
-            <div class="clickable" id="spin-button-bottom">
+            <div class="clickable" id="spin-button-bottom" onclick="scrollToElement('home')">
                 <i class="fa-solid fa-arrow-up spin-bottom-icon"></i>
                 <div class="spin-text spin-bottom-top">scroll</div>
                 <div class="spin-text spin-bottom-right">up</div>
