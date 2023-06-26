@@ -221,10 +221,10 @@ h3, h4, h5, h6, i {
 }
 
 .spin-icon {
-  font-size: 20px;
+  height: 20px;
   position: absolute;
-  top: 52px;
-  left: 52px;
+  top: 50px;
+  left: 50px;
 }
 
 /* Home Styling */
@@ -406,8 +406,8 @@ h3, h4, h5, h6, i {
   align-items: center;
 }
 #tv .header {
-  width: calc(100% - 1px);
-  height: 50px;
+  width: 100%;
+  aspect-ratio: 800/27;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid var(--text-color);
@@ -453,7 +453,7 @@ h3, h4, h5, h6, i {
 
 #phone .header {
   width: calc(100% + 2px);
-  height: 26px;
+  aspect-ratio: 100/9;
   border-top-left-radius: 21px;
   border-top-right-radius: 21px;
   background-color: var(--bg-color);
@@ -470,7 +470,7 @@ h3, h4, h5, h6, i {
 }
 
 #phone .footer {
-  height: 32px;
+  aspect-ratio: 100/9;
   background-color: var(--bg-color);
   border-bottom-left-radius: 21px;
   border-bottom-right-radius: 21px;
@@ -542,13 +542,18 @@ h3, h4, h5, h6, i {
   text-decoration: none;
   color: var(--text-color);
   font-family: "Space Mono", sans-serif;
+  display: flex;
+  width: fit-content;
+  align-items: center;
 }
 
 #contact .address {
   margin-top: 100px;
 }
-#contact i {
+.email img {
   padding: 0 5px;
+  transform: rotate(-90deg);
+  height: 29px;
 }
 
 #contact p {
@@ -596,10 +601,10 @@ h3, h4, h5, h6, i {
 }
 
 .spin-bottom-icon {
-  font-size: 20px;
+  height: 20px;
   position: absolute;
-  top: 52px;
-  left: 46px;
+  top: 50px;
+  left: 50px;
 }
 
 /* footer styling */
@@ -1416,6 +1421,10 @@ font-family: "Space Mono", sans-serif;
 @media only screen and (max-width: 768px) {
   #contact .email {
     font-size: 19px;
+  }
+
+  .email img {
+    height: 19px;
   }
   #contact p {
     font-size: 19px;

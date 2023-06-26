@@ -125,7 +125,7 @@ window.addEventListener("scroll", function () {
   spinButton.style.transform = `rotate(${scrollPosition / 2}deg)`;
   spinIcon.style.transform = `rotate(${-scrollPosition / 2}deg)`;
   spinButtonBottom.style.transform = `rotate(${scrollPositionBottom / 2}deg)`;
-  spinIconBottom.style.transform = `rotate(${-scrollPositionBottom / 2}deg)`;
+  spinIconBottom.style.transform = `rotate(${-scrollPositionBottom / 2 + 180}deg)`;
 });
 
 /**
@@ -543,6 +543,14 @@ LottieInteractivity.create({
 });
 
 /** cursor stuff */
+let cursorDiv = document.getElementById("cursor");
+let cursorAnim = lottie.loadAnimation({
+  container: cursorDiv,
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/cursor1.json'
+});
 gsap.set(".cursor", {xPercent: -50, yPercent: -50});
 
 const cursor = document.querySelector(".cursor");
