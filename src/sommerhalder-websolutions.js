@@ -585,17 +585,14 @@ gsap.ticker.add(() => {
 });
 
 window.addEventListener("click", e => {
-  scale.play(0);
-  setTimeout(() => {
-    scale.reverse();
-  }, 200);
+  cursorAnim.playSegments([0, 27], true);
 });
 
-let scale = gsap.timeline({ paused: true })
+/*let scale = gsap.timeline({ paused: true })
   .to(".cursor", {
     scale: 2,
     transformOrigin: 'center',
-  });
+  });*/
 
   let rotation = gsap.timeline({ paused: true })
   .to(".cursor", {
@@ -607,11 +604,12 @@ let scale = gsap.timeline({ paused: true })
   let clickables = document.querySelectorAll('.clickable');
   clickables.forEach(clickable => {
     clickable.addEventListener("mouseover", () => {
-      rotation.play();
+      rotation.reverse();
+      
     });
   
     clickable.addEventListener("mouseout", () => {
-      rotation.reverse();
+      rotation.play();
     });
   });
 

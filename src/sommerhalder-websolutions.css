@@ -227,6 +227,10 @@ h3, h4, h5, h6, i {
   left: 50px;
 }
 
+.dark-mode .spin-icon {
+  filter: invert(1);
+}
+
 /* Home Styling */
 #home {
   height: calc(100vh - var(--nav-height));
@@ -556,6 +560,10 @@ h3, h4, h5, h6, i {
   height: 29px;
 }
 
+.dark-mode .email img {
+  filter: invert(1);
+}
+
 #contact p {
   font-size: 25px;
   line-height: normal;
@@ -605,6 +613,10 @@ h3, h4, h5, h6, i {
   position: absolute;
   top: 50px;
   left: 50px;
+}
+
+.dark-mode .spin-bottom-icon {
+  filter: invert(1);
 }
 
 /* footer styling */
@@ -1000,15 +1012,17 @@ font-family: "Space Mono", sans-serif;
 /* cursor styling */
 .cursor {
   display: none;
-  width: 20px;
-  height: 20px;
+  width: 80px;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
-  border: 2px solid var(--text-color);
   pointer-events: none;
   z-index: 9;
-  background-color: var(--bg-color);
+}
+
+.dark-mode .cursor {
+  filter: invert(1);
 }
 @media only screen and (max-width: 1881px){
   
