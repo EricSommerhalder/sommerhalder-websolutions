@@ -48,12 +48,12 @@
 
 
 <body>
-    <div class="body-wrapper">
+    <div class="body-wrapper" id="body-wrapper">
         <header id="navbar" class="navbar">
-            <a class="clickable black" onclick="scrollToElement('home')"><img
+            <a id="text-only" class="clickable" onclick="scrollToElement('home')"><img
+                    src="../assets/logo-text-only.png" /></a>
+            <a class="clickable navbar-img" onclick="scrollToElement('home')"><img
                     src="../assets/SWS_Logo_Standard_rgb.png" /></a>
-            <a class="clickable white" onclick="scrollToElement('home')"><img
-                    src="../assets/SWS_Logo_Inverted_rgb.png" /></a>
             <div class="links">
                 <a class="clickable" onclick="scrollToElement('angebot')">Angebot</a>
                 <a class="clickable" onclick="scrollToElement('ablauf')">Prozess</a>
@@ -87,14 +87,49 @@
             <span class="clickable menu-option last" onclick="toggleMenu(); scrollToElement('contact')">Kontakt</span>
         </div>
         <div id="home">
-            <div class="left"></div>
+            <div class="left">
+                <svg id="home-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" preserveAspectRatio="xMidYMin meet">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: #000;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 1;
+                                stroke-width: 4px;
+                            }
+                        </style>
+                    </defs>
+                    <line id="Linie1" class="cls-1" x1="524.15" y1="129.11" x2="168.3" y2="334.55" />
+                    <line id="Linie1-copy" class="cls-1" x1="524.15" y1="129.11" x2="168.3" y2="334.55" />
+                    <line id="Linie2" class="cls-1" x1="879.99" y1="334.55" x2="524.15" y2="129.11" />
+                    <line id="Linie3" class="cls-1" x1="524.15" y1="540" x2="879.99" y2="334.55" />
+                    <line id="Linie5" class="cls-1" x1="168.3" y1="334.55" x2="524.15" y2="540" />
+                    <line id="Linie6" class="cls-1" x1="168.3" y1="334.55" x2="168.3" y2="540" />
+                    <line id="Linie7" class="cls-1" x1="524.15" y1="334.55" x2="524.15" y2="129.11" />
+                    <line id="Linie8" class="cls-1" x1="524.15" y1="334.55" x2="168.3" y2="540" />
+                    <line id="Linie8-copy" class="cls-1" x1="524.15" y1="334.55" x2="168.3" y2="540" />
+                    <line id="Linie9" class="cls-1" x1="879.99" y1="540" x2="524.15" y2="334.55" />
+                    <line id="Linie10" class="cls-1" x1="524.15" y1="745.45" x2="879.99" y2="540" />
+                    <line id="Linie10-copy" class="cls-1" x1="524.15" y1="745.45" x2="879.99" y2="540" />
+                    <line id="Linie11" class="cls-1" x1="168.3" y1="540" x2="524.15" y2="745.45" />
+                    <line id="Linie12" class="cls-1" x1="879.99" y1="745.45" x2="879.99" y2="540" />
+                    <line id="Linie13" class="cls-1" x1="524.15" y1="745.45" x2="524.15" y2="950.89" />
+                    <line id="Linie14" class="cls-1" x1="524.15" y1="540" x2="168.3" y2="745.45" />
+                    <line id="Linie15" class="cls-1" x1="879.99" y1="745.45" x2="524.15" y2="540" />
+                    <line id="Linie16" class="cls-1" x1="524.15" y1="950.89" x2="879.99" y2="745.45" />
+                    <line id="Linie16-copy" class="cls-1" x1="524.15" y1="950.89" x2="879.99" y2="745.45" />
+                    <line id="Linie17" class="cls-1" x1="168.3" y1="745.45" x2="524.15" y2="950.89" />
+                </svg>
+
+            </div>
             <div class="right">
                 <h1>Individuelle<br> Weblösungen<br> aus Basel</h1>
                 <h2>Gemeinsam verwandeln<br> wir
                     deine Vision in die Realität</h2>
             </div>
             <div class="clickable" id="spin-button" onclick="scrollToElement('angebot')">
-                <img class="spin-icon" src="../assets/pfeil/Arrow Right@2x.png"/>
+                <img class="spin-icon" src="../assets/pfeil/Arrow Right@2x.png" />
                 <div class="spin-text spin-top">scroll</div>
                 <div class="spin-text spin-right">down</div>
                 <div class="spin-text spin-bottom">scroll</div>
@@ -253,116 +288,119 @@
         </section>
     -->
 
-    <div id="ablauf">
-    <div class="panels-container">
-        <div class="panel" id="panel1">
-          <div class="content-wrapper">
-            
-            <p class="count desktop">1.</p>
-            <div class="panel-content">
-              <p class="section-header desktop">Erstes Gespräch</p>
-              <div class="mobile">
-                <p class="count">1.</p>
-                <p class="section-header">Erstes Gespräch</p>
-              </div>
-              <div id="lottie-animation-1">
-  
-              </div>
-              <p class="ablauf-text">Wir starten mit einem unverbindlichen und kostenlosen
-                Austausch.
-                Du erzählst mir von deinem Projekt und ich bringe Vorschläge ein, wie wir deine
-                Ideen verwirklichen können. Bei uns gibt es kein 'Geht nicht' - nur
-                massgeschneiderte Lösungen!</p>
+        <div id="ablauf">
+            <div class="panels-container">
+                <div class="panel" id="panel1">
+                    <div class="content-wrapper">
+
+                        <p class="count desktop">1.</p>
+                        <div class="panel-content">
+                            <p class="section-header desktop">Erstes Gespräch</p>
+                            <div class="mobile">
+                                <p class="count">1.</p>
+                                <p class="section-header">Erstes Gespräch</p>
+                            </div>
+                            <div id="lottie-animation-1">
+
+                            </div>
+                            <p class="ablauf-text">Wir starten mit einem unverbindlichen und kostenlosen
+                                Austausch.
+                                Du erzählst mir von deinem Projekt und ich bringe Vorschläge ein, wie wir deine
+                                Ideen verwirklichen können. Bei uns gibt es kein 'Geht nicht' - nur
+                                massgeschneiderte Lösungen!</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel" id="panel2">
+                    <div class="content-wrapper">
+
+                        <p class="count desktop">2.</p>
+                        <div class="panel-content">
+                            <p class="section-header desktop">Designkonzept</p>
+                            <div class="mobile">
+                                <p class="count">2.</p>
+                                <p class="section-header">Konzept</p>
+                            </div>
+                            <div id="lottie-animation-2">
+
+                            </div>
+                            <p class="ablauf-text">Bevor die eigentliche Umsetzung beginnt, definieren wir
+                                gemeinsam, wie deine App oder Website aussehen soll. Obwohl ich selbst kein
+                                Designer
+                                bin, kann ich auf Wunsch die richtige Fachperson aus meinem Netzwerk für diesen
+                                Bereich hinzuziehen.
+                                Zusammen gestalten wir ein Design, das deine Vision widerspiegelt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="panel3">
+                    <div class="content-wrapper">
+
+                        <p class="count desktop">3.</p>
+                        <div class="panel-content">
+                            <p class="section-header desktop">Vereinbarung</p>
+                            <div class="mobile">
+                                <p class="count">3.</p>
+                                <p class="section-header">Vereinbarung</p>
+                            </div>
+                            <div id="lottie-animation-3">
+
+                            </div>
+                            <p class="ablauf-text">Gemeinsam definieren wir alle Funktionen deiner App oder
+                                Website
+                                und halten diese im Detail fest. Daraus entsteht ein klares Bild des Projekts
+                                und
+                                ein strukturierter Zeitplan, der uns hilft, den Überblick zu behalten und den
+                                Projektverlauf nachzuverfolgen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="panel4">
+                    <div class="content-wrapper">
+
+                        <p class="count desktop">4.</p>
+                        <div class="panel-content">
+                            <p class="section-header desktop">Projektumsetzung</p>
+                            <div class="mobile">
+                                <p class="count">4.</p>
+                                <p class="section-header">Umsetzung</p>
+                            </div>
+                            <div id="lottie-animation-4">
+
+                            </div>
+                            <p class="ablauf-text">Jetzt ist es an der Zeit, deine Ideen von der Skizze auf den
+                                Bildschirm zu bringen. Du erhältst regelmässige Updates zu den Fortschritten
+                                und
+                                wir können uns jederzeit digital oder persönlich treffen, um aufkommende
+                                Fragen zu besprechen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="panel5">
+                    <div class="content-wrapper">
+
+                        <p class="count desktop">5.</p>
+                        <div class="panel-content">
+                            <p class="section-header desktop">Projektabschluss</p>
+                            <div class="mobile">
+                                <p class="count">5.</p>
+                                <p class="section-header">Abschluss</p>
+                            </div>
+                            <div id="lottie-animation-5">
+
+                            </div>
+                            <p class="ablauf-text">Dein Projekt wird zum vereinbarten Zeitpunkt erfolgreich
+                                abgeschlossen. Ich übergebe dir den vollständigen und sorgfältig dokumentierten
+                                Quellcode. Solltest du Unterstützung beim Hosting oder bei anderen Fragen
+                                benötigen,
+                                stehe ich dir selbstverständlich zur Verfügung. Nun hast du die Freiheit,
+                                dein Produkt unabhängig zu nutzen.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          
-          </div>
         </div>
-        <div class="panel" id="panel2">
-          <div class="content-wrapper">
-            
-            <p class="count desktop">2.</p>
-            <div class="panel-content">
-              <p class="section-header desktop">Designkonzept</p>
-              <div class="mobile">
-                <p class="count">2.</p>
-                <p class="section-header">Konzept</p>
-              </div>
-              <div id="lottie-animation-2">
-  
-              </div>
-              <p class="ablauf-text">Bevor die eigentliche Umsetzung beginnt, definieren wir
-                gemeinsam, wie deine App oder Website aussehen soll. Obwohl ich selbst kein
-                Designer
-                bin, kann ich auf Wunsch die richtige Fachperson aus meinem Netzwerk für diesen
-                Bereich hinzuziehen.
-                Zusammen gestalten wir ein Design, das deine Vision widerspiegelt.</p>
-            </div>
-          </div>
-        </div><div class="panel" id="panel3">
-          <div class="content-wrapper">
-            
-            <p class="count desktop">3.</p>
-            <div class="panel-content">
-              <p class="section-header desktop">Vereinbarung</p>
-              <div class="mobile">
-                <p class="count">3.</p>
-                <p class="section-header">Vereinbarung</p>
-              </div>
-              <div id="lottie-animation-3">
-  
-              </div>
-              <p class="ablauf-text">Gemeinsam definieren wir alle Funktionen deiner App oder
-                Website
-                und halten diese im Detail fest. Daraus entsteht ein klares Bild des Projekts
-                und
-                ein strukturierter Zeitplan, der uns hilft, den Überblick zu behalten und den
-                Projektverlauf nachzuverfolgen.</p>
-            </div>
-          </div>
-        </div><div class="panel" id="panel4">
-          <div class="content-wrapper">
-            
-            <p class="count desktop">4.</p>
-            <div class="panel-content">
-              <p class="section-header desktop">Projektumsetzung</p>
-              <div class="mobile">
-                <p class="count">4.</p>
-                <p class="section-header">Umsetzung</p>
-              </div>
-              <div id="lottie-animation-4">
-  
-              </div>
-              <p class="ablauf-text">Jetzt ist es an der Zeit, deine Ideen von der Skizze auf den
-                Bildschirm zu bringen. Du erhältst regelmässige Updates zu den Fortschritten
-                und
-                wir können uns jederzeit digital oder persönlich treffen, um aufkommende
-                Fragen zu besprechen.</p>
-            </div>
-          </div>
-        </div><div class="panel" id="panel5">
-          <div class="content-wrapper">
-            
-            <p class="count desktop">5.</p>
-            <div class="panel-content">
-              <p class="section-header desktop">Projektabschluss</p>
-              <div class="mobile">
-                <p class="count">5.</p>
-                <p class="section-header">Abschluss</p>
-              </div>
-              <div id="lottie-animation-5">
-  
-              </div>
-              <p class="ablauf-text">Dein Projekt wird zum vereinbarten Zeitpunkt erfolgreich
-                abgeschlossen. Ich übergebe dir den vollständigen und sorgfältig dokumentierten
-                Quellcode. Solltest du Unterstützung beim Hosting oder bei anderen Fragen
-                benötigen,
-                stehe ich dir selbstverständlich zur Verfügung. Nun hast du die Freiheit,
-                dein Produkt unabhängig zu nutzen.</p>
-            </div>
-          </div>
-        </div>
-    </div>
-</div>
         <div id="projects" class="animated-element">
             <h2>
                 Letztes Projekt
@@ -405,7 +443,7 @@
         <div id="about" class="animated-element">
             <h2 class="mobile-title">Über mich</h2>
             <div class="left">
-                <img src="../assets/avatar.webp" alt="Avatar von Eric" />
+                <img src="../assets/Portrait_Eric_Sommerhalder_low.jpeg" alt="Avatar von Eric" />
             </div>
             <div class="right">
                 <h2 class="pc-title">Über mich</h2>
@@ -425,26 +463,30 @@
         <div id="values">
             <h2>Meine Werte</h2>
             <div class="values-wrapper">
-            <div class="values-panel">
-                <img src="../assets/SWS_icon-diamant.svg"/>
-                <h3>Qualität</h3>
-                <p>Ich setze auf erstklassige Qualität und pünktliche Lieferung, um sicherzustellen, dass du die bestmögliche
-                    Weblösung genau dann bekommst, wenn du sie brauchst.</p>
-            </div>
-            <div class="values-panel">
-                <img src="../assets/SWS_icon-gluehbirne-puzzle.svg"/>
-                <h3>Lösungsorientiert</h3>
-                <p>Mit einem lösungsorientierten Ansatz verwandle ich Herausforderungen in Chancen, um Weblösungen zu
-                    entwickeln, die perfekt auf deine Bedürfnisse zugeschnitten sind.</p>
-            </div>
-            <div class="values-panel">
-                <img src="../assets/SWS_icon-handshake.svg"/>
-                <h3>Persönlich</h3>
-                <p>Ich glaube an einen persönlichen Ansatz bei der Arbeit mit meinen Kund:innen. Du bist nicht nur ein Projekt,
-                    sondern ein:e Partner:in. Ich bin immer bereit zuzuhören und auf deine Bedürfnisse einzugehen.</p>
+                <div class="values-panel">
+                    <img src="../assets/SWS_icon-diamant.svg" />
+                    <h3>Qualität</h3>
+                    <p>Ich setze auf erstklassige Qualität und pünktliche Lieferung, um sicherzustellen, dass du die
+                        bestmögliche
+                        Weblösung genau dann bekommst, wenn du sie brauchst.</p>
+                </div>
+                <div class="values-panel">
+                    <img src="../assets/SWS_icon-gluehbirne-puzzle.svg" />
+                    <h3>Lösungsorientiert</h3>
+                    <p>Mit einem lösungsorientierten Ansatz verwandle ich Herausforderungen in Chancen, um Weblösungen
+                        zu
+                        entwickeln, die perfekt auf deine Bedürfnisse zugeschnitten sind.</p>
+                </div>
+                <div class="values-panel">
+                    <img src="../assets/SWS_icon-handshake.svg" />
+                    <h3>Persönlich</h3>
+                    <p>Ich glaube an einen persönlichen Ansatz bei der Arbeit mit meinen Kund:innen. Du bist nicht nur
+                        ein Projekt,
+                        sondern ein:e Partner:in. Ich bin immer bereit zuzuhören und auf deine Bedürfnisse einzugehen.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
         <div id="contact" class="animated-element">
             <h2 class="mobile-title">Hast du eine Frage, eine Idee oder brauchst Unterstützung bei einem Projekt?</h2>
             <div class="left">
@@ -456,8 +498,9 @@
                 <h2 class="pc-title">Hast du eine Frage, eine Idee oder brauchst Unterstützung bei einem Projekt?</h2>
                 <div class="wrapper">
                     <h3>Dann kontaktiere mich <br>unverbindlich.</h3>
-                    <a class="clickable email" href="mailto:eric@sommerhalder-websolutions.ch">email <img src="../assets/pfeil/Arrow Right@2x.png">
-                            </a>
+                    <a class="clickable email" href="mailto:eric@sommerhalder-websolutions.ch">email <img
+                            src="../assets/pfeil/Arrow Right@2x.png">
+                    </a>
                     <div class="address">
                         <p>Sommerhalder Websolutions</p>
                         <p>Eric Sommerhalder</p>
@@ -470,7 +513,7 @@
                 </div>
             </div>
             <div class="clickable" id="spin-button-bottom" onclick="scrollToElement('home')">
-                <img class="spin-bottom-icon" src="../assets/pfeil/Arrow Right@2x.png"/>
+                <img class="spin-bottom-icon" src="../assets/pfeil/Arrow Right@2x.png" />
                 <div class="spin-text spin-bottom-top">scroll</div>
                 <div class="spin-text spin-bottom-right">up</div>
                 <div class="spin-text spin-bottom-bottom">scroll</div>

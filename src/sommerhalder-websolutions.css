@@ -65,6 +65,27 @@ h3, h4, h5, h6, i {
     width: 400px;
 }
 
+.navbar-img {
+  display: none;
+}
+
+.dark-mode .navbar-img {
+  filter: invert(1);
+}
+
+#text-only img{
+  position: absolute;
+  top: 30px;
+  left: 139px;
+  width: 217px;
+}
+
+
+
+.dark-mode #text-only img{
+  filter: invert(1);
+}
+
 .white {
   display: none;
 }
@@ -238,12 +259,16 @@ h3, h4, h5, h6, i {
   display: flex;
   position: relative;
   margin-bottom: 200px;
+  z-index: 3;
 }
 
 #home .left, #home .right {
   width: 50%;
 }
-
+#home .left {
+  display: flex;
+  align-items: flex-start;
+}
 #home h1 {
   padding-left: 100px;
   width: 70%;
@@ -284,6 +309,20 @@ h3, h4, h5, h6, i {
 
 .dark-mode .icons-white {
   display: block;
+}
+
+#home-logo {
+  overflow: visible;
+  pointer-events: none;
+}
+
+.dark-mode #home-logo {
+  filter: invert(1);
+}
+
+.pin-spacer {
+  pointer-events: none;
+
 }
 /* About Styling */
 
@@ -953,6 +992,9 @@ font-family: "Space Mono", sans-serif;
    width: 70%;
    align-self: center;
  }
+ #home .left svg {
+  width: 70%;
+}
 }
 /* values styling */
 #values {
@@ -1001,6 +1043,8 @@ font-family: "Space Mono", sans-serif;
   margin: 0 2.5% 0 2.5%;
 }
 
+
+
 /*#ablauf::-webkit-scrollbar {
   display: none;
 }*/
@@ -1033,6 +1077,12 @@ font-family: "Space Mono", sans-serif;
 @media only screen and (max-width: 1643px) {
   .navbar img {
     width: 300px;
+  }
+
+  #text-only img{
+    top: 38px;
+    left: 104px;
+    width: 163px;
   }
 
   .links a {
@@ -1074,6 +1124,12 @@ font-family: "Space Mono", sans-serif;
 @media only screen and (max-width: 1160px){
   .navbar img {
     width: 200px;
+  }
+  #text-only img{
+    position: absolute;
+    top: 21px;
+    left: 69px;
+    width: 109px;
   }
 }
 /* mobile menu */
@@ -1557,3 +1613,4 @@ font-family: "Space Mono", sans-serif;
   }
 
 }
+

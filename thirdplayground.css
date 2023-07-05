@@ -9,11 +9,12 @@ svg {
 
 .lines {
   position: fixed;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: repeating-linear-gradient(to right, blue 0, blue 1px, transparent 1px, transparent 100px);
+  border-top: 1px blue solid;
 }
 
 * {
