@@ -1,3 +1,4 @@
+document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`); //wäge mobile bar hundsgefick
 /**
  * TODO: impromve performance, spezifisch durch gschiidere loop im hero logo
  */
@@ -838,7 +839,6 @@ let strokeWidth = 2;
     targetScale = targetScale * 1/2;
     point.x = 40;
     point.y = 19;
-    strokeWidth = 1;
   }
   else if (window.innerWidth <= 1643){
     targetScale = targetScale * 3/4;

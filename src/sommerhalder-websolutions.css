@@ -254,7 +254,7 @@ h3, h4, h5, h6, i {
 
 /* Home Styling */
 #home {
-  height: calc(100vh - var(--nav-height));
+  height: calc(100 * var(--vh) - var(--nav-height));
   margin-top: var(--nav-height);
   display: flex;
   position: relative;
@@ -1192,7 +1192,7 @@ font-family: "Space Mono", sans-serif;
     width: 100vw;
     top: var(--nav-height);
     left:0;
-    z-index: 3;
+    z-index: 4;
   }
   .mobile-menu-active #mobile-menu .menu-option{
     border-top: 1px var(--text-color) solid;
