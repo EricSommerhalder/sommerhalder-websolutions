@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="sommerhalder-websolutions.css" />
     <script src="https://kit.fontawesome.com/ca1d8359ae.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.11.0/lottie.min.js"></script>
@@ -18,7 +18,6 @@
     <title>Sommerhalder Websolutions</title>
 </head>
 
-<div class="cursor" id="cursor"></div>
 <!--
 <div id="loadAnimation"></div>
 
@@ -128,14 +127,26 @@
                 <h2>Gemeinsam verwandeln<br> wir
                     deine Vision in die Realität</h2>
             </div>
-            <div class="clickable" id="spin-button" onclick="scrollToElement('angebot')">
-                <img class="spin-icon" src="../assets/pfeil/Arrow Right@2x.png" />
-                <div class="spin-text spin-top">scroll</div>
-                <div class="spin-text spin-right">down</div>
-                <div class="spin-text spin-bottom">scroll</div>
-                <div class="spin-text spin-left">down</div>
-            </div>
+            
         </div>
+        
+        <div id="home-mobile">
+            <img class="background-image" src="../assets/S-HERO.png"/>
+
+            
+            
+                <h1>Individuelle<br> Weblösungen<br> aus Basel</h1>
+                <h2>Gemeinsam verwandeln<br> wir
+                    deine Vision in die Realität</h2>
+                    <div class="clickable" id="spin-button" onclick="scrollToElement('angebot')">
+                        <img class="spin-icon" src="../assets/pfeil/Arrow Right@2x.png" />
+                        <div class="spin-text spin-top">scroll</div>
+                        <div class="spin-text spin-right">down</div>
+                        <div class="spin-text spin-bottom">scroll</div>
+                        <div class="spin-text spin-left">down</div>
+                    </div>
+        </div>
+        <!--
         <div class="home-icons icons-black">
             <img class="clickable" src="../assets/Instagram_schwarz.svg" />
             <img class="clickable" src="../assets/LinkedIn_schwarz.svg" />
@@ -144,6 +155,7 @@
             <img class="clickable" src="../assets/Instagram_weiss.svg" />
             <img class="clickable" src="../assets/LinkedIn_weiss.svg" />
         </div>
+        -->
         <div id="angebot" class="animated-element">
             <h2 class="mobile-title">Die Umsetzung<br> deiner Vision</h2>
             <div class="angebot-container">
@@ -464,21 +476,21 @@
             <h2>Meine Werte</h2>
             <div class="values-wrapper">
                 <div class="values-panel">
-                    <img src="../assets/SWS_icon-diamant.svg" />
+                    <img src="../assets/SWS_icon-diamant.png" />
                     <h3>Qualität</h3>
                     <p>Ich setze auf erstklassige Qualität und pünktliche Lieferung, um sicherzustellen, dass du die
                         bestmögliche
                         Weblösung genau dann bekommst, wenn du sie brauchst.</p>
                 </div>
                 <div class="values-panel">
-                    <img src="../assets/SWS_icon-gluehbirne-puzzle.svg" />
+                    <img src="../assets/SWS_icon-gluebirne-puzzle.png" />
                     <h3>Lösungsorientiert</h3>
                     <p>Mit einem lösungsorientierten Ansatz verwandle ich Herausforderungen in Chancen, um Weblösungen
                         zu
                         entwickeln, die perfekt auf deine Bedürfnisse zugeschnitten sind.</p>
                 </div>
                 <div class="values-panel">
-                    <img src="../assets/SWS_icon-handshake.svg" />
+                    <img src="../assets/SWS_icon-handshake.png" />
                     <h3>Persönlich</h3>
                     <p>Ich glaube an einen persönlichen Ansatz bei der Arbeit mit meinen Kund:innen. Du bist nicht nur
                         ein Projekt,
@@ -521,6 +533,7 @@
             </div>
         </div>
         <footer>
+            <!--
             <div class="clickable icons icons-black">
                 <img src="../assets/Instagram_schwarz.svg" />
                 <img src="../assets/LinkedIn_schwarz.svg" />
@@ -529,15 +542,16 @@
                 <img src="../assets/Instagram_weiss.svg" />
                 <img src="../assets/LinkedIn_weiss.svg" />
             </div>
+            -->
             <p>Gemeinsam verwandeln wir deine Vision in die Realität<br>eric@sommerhalder-websolutions.ch</p>
             <p class="footer-address">Im Nebengraben 19, 4107 Ettingen<br>+41 79 759 34 24</p>
             <div class="links">
-                <a class="clickable" href="/impressum">Impressum</a>
-                <a class="clickable" href="/datenschutz">Datenschutz</a>
+                <a class="clickable" href="./impressum.html">Impressum</a>
+                <a class="clickable" href="./datenschutz.html">Datenschutz</a>
             </div>
             <div class="links">
                 <p>&copy; Sommerhalder Websolutions 2023</p>
-                <a class="clickable" href="/agb">AGB</a>
+                <a class="clickable" href="./agb.html">AGB</a>
             </div>
         </footer>
     </div>

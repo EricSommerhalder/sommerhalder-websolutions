@@ -22,9 +22,7 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
 }
-a {
-  cursor: none;
-}
+
 html {
   scroll-behavior: smooth;
 }
@@ -35,7 +33,6 @@ body {
 html,
 body {
   margin: 0;
-  cursor: none;
 }
 .body-wrapper {
   overflow: hidden;
@@ -46,6 +43,10 @@ h2 {
 }
 h3, h4, h5, h6, i {
   font-weight: 300;
+}
+
+.clickable {
+  cursor: pointer;
 }
 /* Navbar Styling */
 .navbar {
@@ -145,7 +146,6 @@ h3, h4, h5, h6, i {
     top: 115px;
     right: 48px;
     transition: all 350ms ease-in;
-    cursor: none;
   }
   
   .toggle--label:before {
@@ -210,6 +210,7 @@ h3, h4, h5, h6, i {
   width: 120px;
   height: 120px;
   font-family: "Space Mono", sans-serif;
+  pointer-events: all;
 }
 
 .spin-text {
@@ -254,7 +255,7 @@ h3, h4, h5, h6, i {
 
 /* Home Styling */
 #home {
-  height: calc(100 * var(--vh) - var(--nav-height));
+  height: calc(100vh - var(--nav-height));
   margin-top: var(--nav-height);
   display: flex;
   position: relative;
@@ -262,7 +263,11 @@ h3, h4, h5, h6, i {
   z-index: 3;
 }
 
-#home .left, #home .right {
+#home-mobile {
+  display: none;
+}
+
+#home .left, #home .right{
   width: 50%;
 }
 #home .left {
@@ -324,6 +329,8 @@ h3, h4, h5, h6, i {
   pointer-events: none;
 
 }
+
+
 /* About Styling */
 
 #about {
@@ -936,7 +943,7 @@ font-family: "Space Mono", sans-serif;
 
 
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .panel-content, #panel2 .panel-content, #panel4 .panel-content, #panel5 .panel-content  {
     width: calc(100% - 35px);
     margin-top: 0;
@@ -1488,7 +1495,62 @@ font-family: "Space Mono", sans-serif;
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+  #text-only {
+    display: none;
+  }
+
+  .navbar-img {
+    display: block;
+  }
+  .pin-spacer-heroTrigger {
+    display: none !important;
+  }
+
+  #home-mobile {
+    height: calc(100vh - var(--nav-height));
+    margin-top: var(--nav-height);
+    margin-bottom: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #home-mobile {
+    width: 100%;
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  #home-mobile .background-image {
+    position: absolute;
+    right: 0;
+    width: 200%;
+    transform: translateX(60%);
+    z-index: -1;
+    opacity: 0.3;
+    overflow: hidden;
+  }
+
+  .dark-mode #home-mobile .background-image {
+    filter: invert(1);
+  }
+
+  #home-mobile h1 {
+    margin-top: 50px;
+    width: 80%;
+    font-size: 60px;
+    padding: 0;
+  }
+
+  #home-mobile h2 {
+    width: 80%;
+    font-size: 24px;
+    padding: 0;
+  }
   #contact .email {
     font-size: 19px;
   }
@@ -1588,7 +1650,7 @@ font-family: "Space Mono", sans-serif;
 }
 
 @media only screen and (max-width: 458px) {
-  #home h1 {
+  #home-mobile h1 {
     font-size: 50px;
   }
 

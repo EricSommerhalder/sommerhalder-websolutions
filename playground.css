@@ -1,85 +1,9 @@
-.body-wrapper {
-    overflow: hidden;
-  }
-  
-  #above {
-      min-height: 100vh;
-  } 
+body {
+  /* Ensures that your SVG can stay behind other elements */
+  position: relative;
+}
 
-  #above p {
-      font-size: 50px;
-  }
-  #panels {
-    margin-bottom: 200px;
+#home-logo-mobile {
+  /* Positions your SVG from the right, and makes it cover 20% of the screen width */
 
-  }
-  
-  #panels h2 {
-    font-size: 55px;
-    margin-left: 100px;
-  }
-  
-  
-  #panels #panels-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    padding: 0;
-  }
-  #panels #panels-container .paneltino {
-    position: relative;
-    min-width: 80vw;
-    background-color:red;
-    border-right: 1px solid yellowgreen;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .panel-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-left: 20px;
-    align-items: flex-start;
-    margin-top: 108px;
-  
-  }
-  .count {
-    font-weight: 600;
-    font-size: 155px;
-    margin: 0;
-  }
-  
-  .section-header {
-    font-weight: 600;
-    font-size: 55px;
-    margin: 0;
-  }
-  
-  .ablauf-text {
-    font-weight: 300;
-    font-size: 25px;
-  }
-  
-  .content-wrapper {
-      display: flex;
-      max-width: 650px;
-      position: relative;
-      background-color:blue;
-
-  }
-  
-  .position-wrapper {
-    height: 650px;
-  
-  }
-  
-  .down {
-    align-items: flex-end;
-    display: flex;
-    
-  }
+}

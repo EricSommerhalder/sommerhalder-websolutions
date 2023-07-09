@@ -1,4 +1,3 @@
-document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`); //wäge mobile bar hundsgefick
 /**
  * TODO: impromve performance, spezifisch durch gschiidere loop im hero logo
  */
@@ -390,8 +389,8 @@ function LottieScrollTrigger(vars) {
       if (vars.mobileStart) {
         // Use ScrollTrigger matchMedia to define different start values
         ScrollTrigger.matchMedia({
-          // For mobile screens (below 768px)
-          "(max-width: 768px)": function () {
+          // For mobile screens (below 767px)
+          "(max-width: 767px)": function () {
             st.start = vars.mobileStart;
           }
         });
@@ -399,8 +398,8 @@ function LottieScrollTrigger(vars) {
       if (vars.mobileSpeed) {
         // Use ScrollTrigger matchMedia to define different start values
         ScrollTrigger.matchMedia({
-          // For mobile screens (below 768px)
-          "(max-width: 768px)": function () {
+          // For mobile screens (below 767px)
+          "(max-width: 767px)": function () {
             st.end = speeds[vars.mobileSpeed];
           }
         });
@@ -547,7 +546,7 @@ LottieInteractivity.create({
 });
 
 /** cursor stuff */
-let cursorDiv = document.getElementById("cursor");
+/*let cursorDiv = document.getElementById("cursor");
 let cursorAnim = lottie.loadAnimation({
   container: cursorDiv,
   renderer: 'svg',
@@ -598,7 +597,7 @@ window.addEventListener("click", e => {
     transformOrigin: 'center',
   });*/
 
-let rotation = gsap.timeline({ paused: true })
+/*let rotation = gsap.timeline({ paused: true })
   .to(".cursor", {
     rotation: 45,
     transformOrigin: 'center',
@@ -615,7 +614,7 @@ clickables.forEach(clickable => {
   clickable.addEventListener("mouseout", () => {
     rotation.play();
   });
-});
+});*/
 
 /**
  * burger menu 
@@ -697,14 +696,16 @@ window.addEventListener("resize", calcMenuFontSize);
 /**
  * hero icon
  */
+
 let tl = gsap.timeline({
   scrollTrigger: {
+    id: "heroTrigger",
     trigger: "#home",
     start: `bottom bottom`,
     end: "bottom top",
     onLeave: () => {
-
-      let spacers = document.getElementsByClassName("pin-spacer");
+      if (window.innerWidth > 767){
+        let spacers = document.getElementsByClassName("pin-spacer");
       spacers[0].style.zIndex = 1;
       document.getElementById("home").style.zIndex = 1;
 
@@ -714,8 +715,11 @@ let tl = gsap.timeline({
       }
       document.getElementById("home-logo").style.display = "none";
       document.getElementById("text-only").style.display = "none";
+      }
+      
     },
     onEnterBack: () => {
+      if (window.innerWidth > 767){
       document.getElementsByClassName("pin-spacer")[0].style.zIndex = 3;
       document.getElementById("home").style.zIndex = 3;
       document.getElementById("text-only").style.display = "unset";
@@ -725,6 +729,7 @@ let tl = gsap.timeline({
       }
       document.getElementById("home-logo").style.display = "unset";
       buildHeroTimeline()
+    }
     },
     scrub: 1,
     pin: true,
@@ -734,14 +739,17 @@ let tl = gsap.timeline({
 
 let tween23;
 function buildHeroTimeline(){
+  
   let currentProgress = tl.progress();
   tl.progress(0);
   tl.clear();
+  if (window.innerWidth <= 767){ // return since its not being displayed anyways
+    return;
+  }
 let tween1 = gsap.to("#Linie1", { y: "-=80" });
 let tween2 = gsap.to("#Linie2", { y: "-=80" });
 let tween3 = gsap.to("#Linie3", { y: "-=80" });
 let tween4 = gsap.to("#Linie5", { y: "-=80" });
-
 let tween5 = gsap.to("#Linie14", { y: "+=80" });
 let tween6 = gsap.to("#Linie15", { y: "+=80" });
 let tween7 = gsap.to("#Linie16", { y: "+=80" });
