@@ -1497,11 +1497,11 @@ font-family: "Space Mono", sans-serif;
 
 @media only screen and (max-width: 767px) {
   #text-only {
-    display: none;
+    display: none !important;
   }
 
   .navbar-img {
-    display: block;
+    display: block !important;
   }
   .pin-spacer-heroTrigger {
     display: none !important;
