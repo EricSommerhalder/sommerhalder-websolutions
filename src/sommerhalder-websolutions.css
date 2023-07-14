@@ -990,7 +990,7 @@ font-family: "Space Mono", sans-serif;
 
 
 }
-@media only screen and (max-height: 770px) and (max-width: 550px){
+@media only screen and (max-height: 810px) and (max-width: 550px){
  .ablauf-text {
    font-size: 15px;
  }
@@ -1674,5 +1674,25 @@ font-family: "Space Mono", sans-serif;
     font-size: 32px;
   }
 
+  #lottie-lampe {
+    width: 80%;
+  }
+
+  #contact .wrapper {
+    margin-left: 20%;
+  }
 }
 
+@media only screen and (max-width: 368px) {
+  #home-mobile h1 {
+    font-size: 40px;
+  }
+
+  #home-mobile h2 {
+    font-size: 20px;
+  }
+}
+
+#lottie-animation-4 svg {
+  overflow: visible;
+}
