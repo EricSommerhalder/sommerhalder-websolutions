@@ -990,15 +990,20 @@ font-family: "Space Mono", sans-serif;
 
 
 }
-@media only screen and (max-height: 810px) and (max-width: 550px){
+@media only screen and (max-height: 770px) and (max-width: 550px){
+  .panel-content, #panel2 .panel-content, #panel4 .panel-content, #panel5 .panel-content  {
+    width: calc(100% - 10px);
+  }
  .ablauf-text {
-   font-size: 15px;
+   font-size: 14px;
+   margin: 0;
  }
 
  #lottie-animation-1, #lottie-animation-2, #lottie-animation-3, #lottie-animation-4, #lottie-animation-5 {
    width: 70%;
    align-self: center;
  }
+ 
  #home .left svg {
   width: 70%;
 }
