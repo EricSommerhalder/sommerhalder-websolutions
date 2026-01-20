@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Sommerhalder Websolutions</title>
+    
+    <meta name="title" content="Sommerhalder Websolutions" />
+    <meta name="description" content="Massgeschneiderte Apps und handgemachte Websites - Kreative Lösungen für deine Ideen"/>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sommerhalder-websolutions.ch/" />
+    <meta property="og:title" content="Sommerhalder Websolutions" />
+    <meta property="og:description" content="Massgeschneiderte Apps und handgemachte Websites - Kreative Lösungen für deine Ideen" />
+    <meta property="og:image" content="assets/SWS_Logo_Standard_rgb.png" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sommerhalder-websolutions.ch/" />
+    <meta property="twitter:title" content="Sommerhalder Websolutions" />
+    <meta property="twitter:description" content="Massgeschneiderte Apps und handgemachte Websites - Kreative Lösungen für deine Ideen" />
+    <meta property="twitter:image" content="assets/SWS_Logo_Standard_rgb.png"/>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN4ZG2L7');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <link rel="stylesheet" type="text/css" href="styles/sommerhalder-websolutions.css" />
+</head>
+
+
+<!-- <div id="loadAnimation"></div>
+
+<div id="animationHelper">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080"
+        width="100%" height="100%" class="anim" preserveAspectRatio="xMidYMid meet"
+        style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+        <rect x="0" y="0" width="100%" height="100%" fill="black" mask="url(#hole)" />
+        <mask id="hole">
+            <rect id="rect" x="0" y="0" width="100%" height="100%" fill="white" />
+            <g transform="matrix(9.935819625854492,0,0,9.935819625854492,607.944091796875,266.5264892578125)"
+                opacity="1" style="display: block;">
+                <path fill="black" fill-opacity="1"
+                    d=" M24.72,16.95 C24.72,16.95 24.81,38.13 24.81,38.13 C24.81,38.13 45.95,38.23 45.95,38.23 C45.95,38.23 45.97,16.97 45.97,16.97 C45.97,16.97 24.72,16.95 24.72,16.95z">
+                </path>
+                <g opacity="1" transform="matrix(1,0,0,1,35.43299865722656,27.489999771118164)">
+                    <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="1"
+                        stroke="black" stroke-opacity="1" stroke-width="0.75"
+                        d=" M-10.715999603271484,-10.543000221252441 C-10.715999603271484,-10.543000221252441 -10.619000434875488,10.642999649047852 -10.619000434875488,10.642999649047852 C-10.619000434875488,10.642999649047852 10.515000343322754,10.744000434875488 10.515000343322754,10.744000434875488 C10.515000343322754,10.744000434875488 10.541999816894531,-10.517000198364258 10.541999816894531,-10.517000198364258 C10.541999816894531,-10.517000198364258 -10.715999603271484,-10.543000221252441 -10.715999603271484,-10.543000221252441z">
+                    </path>
+                </g>
+            </g>
+        </mask>
+    </svg>
+</div> -->
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN4ZG2L7"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="body-wrapper" id="body-wrapper">
+        <div class="cookie-banner" id="cookie-banner">
+            <h3><strong>Cookies-Einstellungen</strong></h3>
+            <p>Für interne Marketinguntersuchungen verwenden wir auf dieser Website analytische Cookies. Weitere Informationen findest du in unserer <a href="./datenschutz">Datenschutzerklärung</a>.</p>
+            <div class="buttons">
+                <button onclick="dismissBanner()" class="clickable" id="cookieConsentButtonAccept">Einverstanden</button>
+                <button onclick="dismissBanner()" class="clickable">Ablehnen</button>
+            </div>
+        </div>
+        <div class="contact-button desktop">
+            <a class="clickable" onclick="scrollToElement('contact')">Kontaktieren</a>
+        </div>
+        <div class="contact-button-small mobile">
+            <img class="clickable contact-image" onclick="scrollToElement('contact')" src="assets/contact_icon.png"/>
+        </div>
+        <header id="navbar" class="navbar">
+            <span id="text-only" class="clickable" onclick="scrollToElement('home')"><img class="logo"
+                    src="assets/logo-text-only.png" alt="Logo von Sommerhalder Websolutions" loading="lazy"/></span>
+            <span class="clickable navbar-img" onclick="scrollToElement('home')"><img class="logo"
+                    src="assets/SWS_Logo_Standard_rgb_small.png" alt="Logo von Sommerhalder Websolutions" /></span>
+            <div class="links">
+                <span class="clickable" onclick="scrollToElement('angebot')">Angebot</span>
+                <span class="clickable" onclick="scrollToElement('ablauf')">Prozess</span>
+                <span class="clickable" onclick="scrollToElement('projects')">Projekte</span>
+                <span class="clickable" onclick="scrollToElement('about')">Über mich</span>
+                <span class="clickable" onclick="scrollToElement('contact')">Kontakt</span>
+            </div>
+            <button class="clickable burger-menu" id="burger-menu" onclick="toggleMenu()" aria-label="Menü öffnen/schliessen">
+
+            </button>
+            <div class="buttons-wrapper">
+                <a class="clickable lang-button" rel="alternate" hreflang="en" href="https://sommerhalder-websolutions.ch/en/">English</a>
+                <input type="checkbox" id="toggle" class="toggle--checkbox">
+                <label for="toggle" class="toggle--label clickable">
+                    <span class="off">OFF</span>
+                    <span class="on">ON</span>
+                </label>
+            </div>
+        </header>
+        <div id="mobile-menu">
+            <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('angebot')">Angebot</span>
+            <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('ablauf')">Prozess</span>
+            <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('projects')">Projekte</span>
+            <span class="clickable menu-option" onclick="toggleMenu(); scrollToElement('about')">Über mich</span>
+            <span class="clickable menu-option last" onclick="toggleMenu(); scrollToElement('contact')">Kontakt</span>
+        </div>
+        <div id="home">
+            <div class="left">
+                <svg id="home-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080"
+                    preserveAspectRatio="xMidYMin meet">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: #000;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 1;
+                                stroke-width: 4px;
+                            }
+                        </style>
+                    </defs>
+                    <line id="Linie1" class="cls-1" x1="524.15" y1="129.11" x2="168.3" y2="334.55" />
+                    <line id="Linie1-copy" class="cls-1" x1="524.15" y1="129.11" x2="168.3" y2="334.55" />
+                    <line id="Linie2" class="cls-1" x1="879.99" y1="334.55" x2="524.15" y2="129.11" />
+                    <line id="Linie3" class="cls-1" x1="524.15" y1="540" x2="879.99" y2="334.55" />
+                    <line id="Linie5" class="cls-1" x1="168.3" y1="334.55" x2="524.15" y2="540" />
+                    <line id="Linie6" class="cls-1" x1="168.3" y1="334.55" x2="168.3" y2="540" />
+                    <line id="Linie7" class="cls-1" x1="524.15" y1="334.55" x2="524.15" y2="129.11" />
+                    <line id="Linie8" class="cls-1" x1="524.15" y1="334.55" x2="168.3" y2="540" />
+                    <line id="Linie8-copy" class="cls-1" x1="524.15" y1="334.55" x2="168.3" y2="540" />
+                    <line id="Linie9" class="cls-1" x1="879.99" y1="540" x2="524.15" y2="334.55" />
+                    <line id="Linie10" class="cls-1" x1="524.15" y1="745.45" x2="879.99" y2="540" />
+                    <line id="Linie10-copy" class="cls-1" x1="524.15" y1="745.45" x2="879.99" y2="540" />
+                    <line id="Linie11" class="cls-1" x1="168.3" y1="540" x2="524.15" y2="745.45" />
+                    <line id="Linie12" class="cls-1" x1="879.99" y1="745.45" x2="879.99" y2="540" />
+                    <line id="Linie13" class="cls-1" x1="524.15" y1="745.45" x2="524.15" y2="950.89" />
+                    <line id="Linie14" class="cls-1" x1="524.15" y1="540" x2="168.3" y2="745.45" />
+                    <line id="Linie15" class="cls-1" x1="879.99" y1="745.45" x2="524.15" y2="540" />
+                    <line id="Linie16" class="cls-1" x1="524.15" y1="950.89" x2="879.99" y2="745.45" />
+                    <line id="Linie16-copy" class="cls-1" x1="524.15" y1="950.89" x2="879.99" y2="745.45" />
+                    <line id="Linie17" class="cls-1" x1="168.3" y1="745.45" x2="524.15" y2="950.89" />
+                </svg>
+            </div>
+            <div class="right">
+                <h1>Individuelle<br> Weblösungen<br> aus Basel</h1>
+                <h2>Gemeinsam verwandeln<br> wir
+                    deine Vision in die Realität</h2>
+            </div>
+        </div>
+
+        <div id="home-mobile">
+            <img class="background-image" src="assets/S-HERO.png" alt="Sommerhalder Websolutions Logo im Hintergrund" />
+            <h1>Individuelle<br> Weblösungen<br> aus Basel</h1>
+            <h2>Gemeinsam verwandeln<br> wir
+                deine Vision in die Realität</h2>
+            <div class="clickable" id="spin-button" onclick="scrollToElement('angebot')">
+                <img class="spin-icon" src="assets/Arrow Right@2x.png" alt="Ein Pfeil"/>
+                <div class="spin-text spin-top">scroll</div>
+                <div class="spin-text spin-right">down</div>
+                <div class="spin-text spin-bottom">scroll</div>
+                <div class="spin-text spin-left">down</div>
+            </div>
+        </div>
+        <!-- Comment in on insta/linkedin support
+        <div class="home-icons icons-black">
+            <img class="clickable" src="assets/Instagram_schwarz.svg" />
+            <img class="clickable" src="assets/LinkedIn_schwarz.svg" />
+        </div>
+        <div class="home-icons icons-white">
+            <img class="clickable" src="assets/Instagram_weiss.svg" />
+            <img class="clickable" src="assets/LinkedIn_weiss.svg" />
+        </div>
+        -->
+        <div id="angebot" class="animated-element">
+            <h2 class="mobile-title">Die Umsetzung<br> deiner Vision</h2>
+            <div class="angebot-container">
+                <div class="left">
+                    <h2 class="pc-title">Die Umsetzung<br> deiner Vision</h2>
+                    <div class="text">
+                        <p>Du möchtest deine Prozesse mit einer massgeschneiderten App optimieren? Du hast den Wunsch
+                            deinen
+                            Webauftritt mit einer einzigartigen, handgemachten Website zu perfektionieren? Du planst,
+                            ein
+                            bestehendes Produkt mit neuen Funktionen zu erweitern? Mit fundierten
+                            Programmierkenntnissen und einer Leidenschaft für kreative Lösungen setze ich deine Ideen in
+                            die Realität um.</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="tagcloud-container">
+                        <div class="tagcloud"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ablauf">
+            <div class="panels-container">
+                <div class="panel" id="panel1">
+                    <div class="content-wrapper">
+                        <p class="count desktop">1.</p>
+                        <div class="panel-content">
+                            <p class="section-header desktop">Erstes Gespräch</p>
+                            <div class="mobile">
+                                <p class="count">1.</p>
+                                <p class="section-header">Erstes Gespräch</p>
+                            </div>
+                            <div id="lottie-animation-1">
+
+                            </div>
+                            <p class="ablauf-text">Wir starten mit einem unverbindlichen und kostenlosen
+                                Austausch.
+                                Du erzählst mir von deinem Projekt und ich bringe Vorschläge ein, wie wir deine
+                                Ideen verwirklichen können. Bei uns gibt es kein 'Geht nicht' - nur
+                                massgeschneiderte Lösungen!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="panel2">
+                    <div class="content-wrapper">
+                        <p class="count desktop">2.</p>
+                        <div class="panel-content">
+                            <p class="section-header desktop">Designkonzept</p>
+                            <div class="mobile">
+                                <p class="count">2.</p>
+                                <p class="section-header">Konzept</p>
+                            </div>
+                            <div id="lottie-animation-2"></div>
+                            <p class="ablauf-text">Bevor die eigentliche Umsetzung beginnt, definieren wir
+                                gemeinsam, wie deine App oder Website aussehen soll. Obwohl ich selbst kein
+                                Designer
+                                bin, kann ich auf Wunsch die richtige Fachperson aus meinem Netzwerk für diesen
+                                Bereich hinzuziehen.
+                                Zusammen gestalten wir ein Design, das deine Vision widerspiegelt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="panel3">
+                    <div class="content-wrapper">
+                        <p class="count desktop">3.</p>
+                        <div class="panel-content">
+                            <p class="section-header desktop">Vereinbarung</p>
+                            <div class="mobile">
+                                <p class="count">3.</p>
+                                <p class="section-header">Vereinbarung</p>
+                            </div>
+                            <div id="lottie-animation-3"></div>
+                            <p class="ablauf-text">Gemeinsam definieren wir alle Funktionen deiner App oder
+                                Website
+                                und halten diese im Detail fest. Daraus entsteht ein klares Bild des Projekts
+                                und
+                                ein strukturierter Zeitplan, der uns hilft, den Überblick zu behalten und den
+                                Projektverlauf nachzuverfolgen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="panel4">
+                    <div class="content-wrapper">
+                        <p class="count desktop">4.</p>
+                        <div class="panel-content">
+                            <p class="section-header desktop">Projektumsetzung</p>
+                            <div class="mobile">
+                                <p class="count">4.</p>
+                                <p class="section-header">Umsetzung</p>
+                            </div>
+                            <div id="lottie-animation-4">
+                            </div>
+                            <p class="ablauf-text">Jetzt ist es an der Zeit, deine Ideen von der Skizze auf den
+                                Bildschirm zu bringen. Du erhältst regelmässige Updates zu den Fortschritten
+                                und
+                                wir können uns jederzeit digital oder persönlich treffen, um aufkommende
+                                Fragen zu besprechen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="panel5">
+                    <div class="content-wrapper">
+                        <p class="count desktop">5.</p>
+                        <div class="panel-content">
+                            <p class="section-header desktop">Projektabschluss</p>
+                            <div class="mobile">
+                                <p class="count">5.</p>
+                                <p class="section-header">Abschluss</p>
+                            </div>
+                            <div id="lottie-animation-5">
+                            </div>
+                            <p class="ablauf-text">Dein Projekt wird spätestens zum vereinbarten Zeitpunkt erfolgreich
+                                abgeschlossen. Ich übergebe dir den vollständigen und sorgfältig dokumentierten
+                                Quellcode. Solltest du Unterstützung beim Hosting oder bei anderen Fragen
+                                benötigen,
+                                stehe ich dir selbstverständlich zur Verfügung. Nun hast du die Freiheit,
+                                dein Produkt unabhängig zu nutzen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="animated-element">
+            <h2>
+                Letztes Projekt
+            </h2>
+            <div class="device-container">
+                <div id="tv">
+                    <div class="header" id="toolbar">
+                        <div class="circle-container">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div onclick="redirect('https://www.michelle-heimberg.ch')" class="clickable screen" id="screen">
+                        <video src="assets/michelle_tv.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                </div>
+                <div id="phone">
+                    <div class="header">
+                        <div class="circle"></div>
+                    </div>
+                    <div onclick="redirect('https://www.michelle-heimberg.ch')" class="clickable screen">
+                        <video src="assets/michelle_phone.mp4" autoplay muted loop></video>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <div class="text-container">
+                <p>
+                    In meinem letzten Projekt habe ich eine Website in eine dynamische Plattform mit einer
+                    Crowdfunding-Funktion und einem nahtlos integrierten Instagram-Viewer verwandelt - ganz nach
+                    den
+                    individuellen Wünschen der Kundin.
+                </p>
+            </div>
+            <h2>Weitere Kunden</h2>
+            <div class="customer-logos">
+                <div class="row-one">
+                    <a href="https://4uservices.ch" target="_blank">
+                        <img src="assets/logos/4uservices.png" alt="4U Services" loading="lazy"/>
+                        
+                      </a>
+                        <a href="https://aimonnews.com" target="_blank">
+                            <img src="assets/logos/aimon.png" alt="AIMON" loading="lazy"/>
+                        </a>
+                        <a href="https://greinacher-design.ch" target="_blank">
+                            <img src="assets/logos/greinacher.png" alt="Greinacher Design" loading="lazy"/>
+                        </a>
+                </div>
+                <div class="row-two">
+                    <a href="https://mvbbremgarten.ch" target="_blank">
+                        <img src="assets/logos/mvb-bremgarten.svg" alt="MVB Bremgarten" loading="lazy"/>
+                    </a>
+                    <a href="https://thenexttrip.xyz" target="_blank">
+                        <img src="assets/logos/thenexttrip.png" alt="The Next Trip" loading="lazy"/>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="mobile-customer-logos">
+                <div class="row-one">
+                    <a href="https://4uservices.ch" target="_blank">
+                        <img src="assets/logos/4uservices.png" alt="4U Services" loading="lazy"/>
+                        
+                      </a>
+                        <a href="https://aimonnews.com" target="_blank">
+                            <img src="assets/logos/aimon.png" alt="AIMON" loading="lazy"/>
+                        </a>
+                        
+                </div>
+                <div class="row-two">
+                    <a href="https://mvbbremgarten.ch" target="_blank">
+                        <img src="assets/logos/mvb-bremgarten.svg" alt="MVB Bremgarten" loading="lazy"/>
+                    </a>
+                    <a href="https://greinacher-design.ch" target="_blank">
+                        <img src="assets/logos/greinacher.png" alt="Greinacher Design" loading="lazy"/>
+                    </a>
+                    
+                </div>
+                <div class="row-three">
+                    <a href="https://thenexttrip.xyz" target="_blank">
+                        <img src="assets/logos/thenexttrip.png" alt="The Next Trip" loading="lazy"/>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div id="about" class="animated-element">
+            <h2 class="mobile-title">Über mich</h2>
+            <div class="left">
+                <img class="avatar" src="assets/Portrait_Eric_Sommerhalder_low.jpeg" alt="Avatar von Eric" loading="lazy"/>
+            </div>
+            <div class="right">
+                <h2 class="pc-title">Über mich</h2>
+                <div class="text">
+                    <p>Ich habe mich entschieden meine jahrelange Erfahrung, meine Fähigkeiten und das erarbeitete
+                        Know-how als Angestellter in der Web- und App-Entwicklungs&#8203;branche direkt an meine
+                        Kund:innen
+                        weiterzugeben. Dieser Hintergrund sowie mein Antrieb Lösungen für meine Kund:innen zu
+                        erarbeiten, ermöglichen es mir, aus Visionen greifbare Realität werden zu lassen.
+                        Wenn ich nicht gerade dabei bin, digitale Träume wahr werden zu
+                        lassen, findet man mich entweder in der Gesellschaft meines Hundes oder auf dem Rugbyfeld. Ich
+                        freue mich darauf, mit dir zusammenzuarbeiten und deine digitale Vision zum Leben zu erwecken.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div id="values">
+            <h2>Meine Werte</h2>
+            <div class="values-wrapper">
+                <div class="values-panel">
+                    <img src="assets/SWS_icon-diamant.png" alt="Ein Diamant" loading="lazy"/>
+                    <h3>Qualität</h3>
+                    <p>Ich setze auf erstklassige Qualität und pünktliche Lieferung, um sicherzustellen, dass du die
+                        bestmögliche
+                        Weblösung genau dann bekommst, wenn du sie brauchst.</p>
+                </div>
+                <div class="values-panel">
+                    <img src="assets/SWS_icon-gluebirne-puzzle.png" alt="Eine Glühbirne kombiniert mit einem Puzzle" loading="lazy"/>
+                    <h3>Lösungsorientiert</h3>
+                    <p>Mit einem lösungsorientierten Ansatz verwandle ich Herausforderungen in Chancen, um Weblösungen
+                        zu
+                        entwickeln, die perfekt auf deine Bedürfnisse zugeschnitten sind.</p>
+                </div>
+                <div class="values-panel">
+                    <img src="assets/SWS_icon-handshake.png" alt="Zwei sich schüttelnde Hände" loading="lazy"/>
+                    <h3>Persönlich</h3>
+                    <p>Ich glaube an einen persönlichen Ansatz bei der Arbeit mit meinen Kund:innen. Du bist nicht nur
+                        ein Projekt,
+                        sondern ein:e Partner:in. Ich bin immer bereit zuzuhören und auf deine Bedürfnisse einzugehen.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="animated-element">
+            <h2 class="mobile-title">Hast du eine Frage, eine Idee oder brauchst Unterstützung bei einem Projekt?</h2>
+            <div class="left">
+                <lottie-player id="lottie-lampe"
+                    src="https://raw.githubusercontent.com/EricSommerhalder/sommerhalder-websolutions/main/assets/light_bulb_animation.json">
+                </lottie-player>
+            </div>
+            <div class="right">
+                <h2 class="pc-title">Hast du eine Frage, eine Idee oder brauchst Unterstützung bei einem Projekt?</h2>
+                <div class="wrapper">
+                    <h3>Dann kontaktiere mich <br>unverbindlich.</h3>
+                    <a class="clickable email" href="mailto:eric@sommerhalder-websolutions.ch">email <img
+                            src="assets/Arrow Right@2x.png" alt="Ein Pfeil">
+                    </a>
+                    <div class="address">
+                        <p>Sommerhalder Websolutions</p>
+                        <p>Eric Sommerhalder</p>
+                        <p>Im Nebengraben 19</p>
+                        <p>4107 Ettingen</p>
+                        <br>
+                        <p>eric@sommerhalder-websolutions.ch</p>
+                        <p>+41 79 759 34 24</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clickable" id="spin-button-bottom" onclick="scrollToElement('home')">
+                <img class="spin-bottom-icon" src="assets/Arrow Right@2x.png" alt="Ein Pfeil"/>
+                <div class="spin-text spin-bottom-top">scroll</div>
+                <div class="spin-text spin-bottom-right">up</div>
+                <div class="spin-text spin-bottom-bottom">scroll</div>
+                <div class="spin-text spin-bottom-left">up</div>
+            </div>
+        </div>
+        <footer>
+            <!-- Comment in on insta/linkedin support
+            <div class="clickable icons icons-black">
+                <img src="assets/Instagram_schwarz.svg" />
+                <img src="assets/LinkedIn_schwarz.svg" />
+            </div>
+            <div class="clickable icons icons-white">
+                <img src="assets/Instagram_weiss.svg" />
+                <img src="assets/LinkedIn_weiss.svg" />
+            </div>
+            -->
+            <p>Gemeinsam verwandeln wir deine Vision in die Realität<br>eric@sommerhalder-websolutions.ch</p>
+            <p class="footer-address">Im Nebengraben 19, 4107 Ettingen<br>+41 79 759 34 24</p>
+            <div class="links">
+                <a class="clickable" href="./impressum">Impressum</a>
+                <a class="clickable" href="./datenschutz">Datenschutz</a>
+            </div>
+            <div class="links">
+                <p>&copy; Sommerhalder Websolutions 2024</p>
+                <a class="clickable" href="./agb">AGB</a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.11.0/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/TagCloud@2.3.2/dist/TagCloud.min.js"></script>
+<script src="scripts/sommerhalder-websolutions.js"></script>
+<script src="scripts/loading-animation.js"></script>
+<script src="scripts/toggle-button.js"></script>
+<script src="scripts/spin-button.js"></script>
+<script src="scripts/tagcloud.js"></script>
+<script src="scripts/ablauf.js"></script>
+</html>
